@@ -1,0 +1,7 @@
+---
+title: How to visualise phylogenetic trees and alignments
+permalink: /docs/howto_Visualize_Data/
+redirect_from: /index.html
+---
+
+## Getting started with tree visualisers
