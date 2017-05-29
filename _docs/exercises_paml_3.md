@@ -1,5 +1,5 @@
 ---
-title: Exercise 4
+title: Exercise 7
 permalink: /docs/exercises_paml_3/
 redirect_from: /index.html
 

@@ -72,7 +72,7 @@
     
     
     {
-      "title": "Exercise 1",
+      "title": "Exercise 4",
       "url": "/2017-ACGT-Tutorials/docs/exercises_paml_0/"
 
     },
@@ -80,7 +80,7 @@
     
     
     {
-      "title": "Exercise 2",
+      "title": "Exercise 5",
       "url": "/2017-ACGT-Tutorials/docs/exercises_paml_1/"
 
     },
@@ -88,7 +88,7 @@
     
     
     {
-      "title": "Exercise 3",
+      "title": "Exercise 6",
       "url": "/2017-ACGT-Tutorials/docs/exercises_paml_2/"
 
     },
@@ -98,7 +98,7 @@
     
     
     {
-      "title": "Exercise 4",
+      "title": "Exercise 7",
       "url": "/2017-ACGT-Tutorials/docs/exercises_paml_3/"
 
     },
@@ -118,8 +118,24 @@
     
     
     {
-      "title": "",
-      "url": "/2017-ACGT-Tutorials"
+      "title": "Solution 1 - Parameter estimation",
+      "url": "/2017-ACGT-Tutorials/docs/solutions_phyml_0/"
+
+    },
+  
+    
+    
+    {
+      "title": "Solution 2 - Tree topologies",
+      "url": "/2017-ACGT-Tutorials/docs/solutions_phyml_1/"
+
+    },
+  
+    
+    
+    {
+      "title": "Solution 3 - Model comparison",
+      "url": "/2017-ACGT-Tutorials/docs/solutions_phyml_2/"
 
     },
   

@@ -24,4 +24,6 @@
       - pipelines
 - title: Solutions
   docs:
-      - index
+      - solutions_phyml_0
+      - solutions_phyml_1
+      - solutions_phyml_2

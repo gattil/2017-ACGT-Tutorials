@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>How to use PhyML</title>
-    <meta name="description" content="Getting started with PhyML">
+    <title>Solution 3 - Model comparison</title>
+    <meta name="description" content="Inferring phylogenies using maximum likelihoodObserving the effect of substitution models the final inferred tree topology.">
 
 
     <link rel="stylesheet" href="/2017-ACGT-Tutorials/css/main.css">
@@ -20,22 +20,22 @@
 
     <link rel="shortcut icon" href="/2017-ACGT-Tutorials/favicon.ico?1">
     <!-- Begin Jekyll SEO tag v2.2.3 -->
-<title>How to use PhyML | ACGT Tutorials</title>
-<meta property="og:title" content="How to use PhyML" />
+<title>Solution 3 - Model comparison | ACGT Tutorials</title>
+<meta property="og:title" content="Solution 3 - Model comparison" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Getting started with PhyML" />
-<meta property="og:description" content="Getting started with PhyML" />
-<link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/howto_PhyML/" />
-<meta property="og:url" content="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/howto_PhyML/" />
+<meta name="description" content="Inferring phylogenies using maximum likelihood Observing the effect of substitution models the final inferred tree topology." />
+<meta property="og:description" content="Inferring phylogenies using maximum likelihood Observing the effect of substitution models the final inferred tree topology." />
+<link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/solutions_phyml_2/" />
+<meta property="og:url" content="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/solutions_phyml_2/" />
 <meta property="og:site_name" content="ACGT Tutorials" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-05-29T15:15:55+02:00" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"How to use PhyML","datePublished":"2017-05-29T15:15:55+02:00","dateModified":"2017-05-29T15:15:55+02:00","description":"Getting started with PhyML","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/howto_PhyML/"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"Solution 3 - Model comparison","datePublished":"2017-05-29T15:15:55+02:00","dateModified":"2017-05-29T15:15:55+02:00","description":"Inferring phylogenies using maximum likelihood Observing the effect of substitution models the final inferred tree topology.","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/solutions_phyml_2/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/howto_PhyML/">
+    <link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/solutions_phyml_2/">
     <link rel="alternate" type="application/rss+xml" title="ACGT Tutorials" href="http://lorenzogatti.me/2017-ACGT-Tutorials/feed.xml" />
 </head>
 
@@ -100,7 +100,7 @@
         
           
           
-          <a class="list-group-item active" href="/2017-ACGT-Tutorials/docs/howto_PhyML/">How to use PhyML</a>
+          <a class="list-group-item " href="/2017-ACGT-Tutorials/docs/howto_PhyML/">How to use PhyML</a>
         
           
           
@@ -235,7 +235,7 @@
         
           
           
-          <a class="list-group-item " href="/2017-ACGT-Tutorials/docs/solutions_phyml_2/">Solution 3 - Model comparison</a>
+          <a class="list-group-item active" href="/2017-ACGT-Tutorials/docs/solutions_phyml_2/">Solution 3 - Model comparison</a>
         
       </ul>
     </div>
@@ -246,88 +246,164 @@
         </div>
 
         <div class="col-md-8">
-            <h1>How to use PhyML</h1>
-            <div id="markdown-content-container"><h2 id="getting-started-with-phyml">Getting started with PhyML</h2>
+            <h1>Solution 3 - Model comparison</h1>
+            <div id="markdown-content-container"><h5 id="inferring-phylogenies-using-maximum-likelihood">Inferring phylogenies using maximum likelihood</h5>
+<h6 id="observing-the-effect-of-substitution-models-the-final-inferred-tree-topology"><strong>Observing the effect of substitution models the final inferred tree topology.</strong></h6>
 
-<p><strong>1. Download the software</strong></p>
+<p><br /></p>
 
-<p><a href="http://www.atgc-montpellier.fr/phyml/download.php">http://www.atgc-montpellier.fr/phyml/download.php</a></p>
+<h4 id="goals">Goals</h4>
 
-<p><strong>2. Launch</strong></p>
+<p>In this exercise you are asked to compare different substitution models (and their variations) on the same dataset.</p>
 
-<ul>
-<li><p><code>PhyML</code> runs without a <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">graphical user interface (GUI)</a>. Therefore, you will see a black terminal window appearing on your monitor anytime you execute it. </p>
+<hr />
 
-<p><em>WARN: On Windows machines <code>PhyML</code> will close automatically the terminal session at the end of the execution.</em> </p></li>
-</ul>
+<div class="panel panel-primary">
+    <div class="panel-heading">Datasets</div>
+    <div class="panel-body">
+        Dataset file: <div class="btn-group">
+          <a href="#" class="btn btn-default">primates-nt.phy</a>
+          <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">View</a></li>
+            <li><a href="#">Download</a></li>
+          </ul>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h5 id="execution-2">Execution</h5>
+
+<table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th>Log-likelihood</th>
+  <th>Parameters</th>
+  <th>AIC</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>JC</td>
+  <td>-6379.66383</td>
+  <td>38</td>
+  <td>12835.32766</td>
+</tr>
+<tr>
+  <td>JC_I</td>
+  <td>-6311.41650</td>
+  <td>39</td>
+  <td>12700.833</td>
+</tr>
+<tr>
+  <td>JC_G</td>
+  <td>-6304.38084</td>
+  <td>39</td>
+  <td>12686.76168</td>
+</tr>
+<tr>
+  <td>JC_G_I</td>
+  <td>-6304.35263</td>
+  <td>40</td>
+  <td>12688.70526</td>
+</tr>
+<tr>
+  <td>HKY</td>
+  <td>-6251.43051</td>
+  <td>42</td>
+  <td>12586.86102</td>
+</tr>
+<tr>
+  <td>HKY_I</td>
+  <td>-6180.09689</td>
+  <td>43</td>
+  <td>12446.19378</td>
+</tr>
+<tr>
+  <td>HKY_G</td>
+  <td>-6172.58045</td>
+  <td>43</td>
+  <td>12431.1609</td>
+</tr>
+<tr>
+  <td>HKY_G_I</td>
+  <td>-6172.52896</td>
+  <td>44</td>
+  <td>12433.05792</td>
+</tr>
+<tr>
+  <td>GTR</td>
+  <td>-6241.48788</td>
+  <td>46</td>
+  <td>12574.97576</td>
+</tr>
+<tr>
+  <td>GTR_I</td>
+  <td>-6171.17472</td>
+  <td>47</td>
+  <td>12436.34944</td>
+</tr>
+<tr>
+  <td>GTR_G</td>
+  <td>-6163.87291</td>
+  <td>47</td>
+  <td>12421.74582</td>
+</tr>
+<tr>
+  <td>GTR_G_I</td>
+  <td>-6172.52896</td>
+  <td>48</td>
+  <td>12441.05792</td>
+</tr>
+</tbody></table>
+
+<p>The number of parameters are computed in the following way for a rooted <br />
+tree:</p>
 
 <blockquote>
-  <p><strong>PhyML execution can be started either with:</strong></p>
+  <p><script type="math/tex" id="MathJax-Element-11">k = (2 \ast \text{no. taxa} - 2) + \text{no. parameters in substitution model} + \text{extra parameters}</script></p>
 
-  <ul>
-  <li>a double click on <em>PhyML-3.1_your-operative-system</em> (i.e. <code>PhyML-3.1_linux64</code>)</li>
-  </ul>
+  <p>substitution models: JC = 0 parameters | HKY = 4 parameters | GTR = 8 <br />
+  parameters <br />
+  invariant sites = +1 parameter <br />
+  gamma rates = +1 parameter</p>
+</blockquote>
 
-  <p><strong>or:</strong> </p>
+<p>We compute the AIC value as follows:</p>
 
-  <ul>
-  <li>dragging <em>PhyML-3.1_your-operative-system</em> (i.e. <code>PhyML-3.1_linux64</code>) into a new terminal session (on OsX and Linux operative systems search for <code>Terminal</code>).</li>
-  </ul>
+<blockquote>
+  <p><script type="math/tex" id="MathJax-Element-12">AIC = 2(k) - \log(L)</script></p>
 </blockquote>
 
 <hr />
 
-<p><strong>3. Interface</strong> </p>
+<h5 id="questions-2">Questions</h5>
 
-<p>PhyML allows the user to prepare the analysis with two different interfaces:</p>
+<p><strong>1. Which model is the best (including HKY+Gamma), based on the AIC criterion?</strong></p>
 
-<ul>
-<li><strong>Menu</strong>: this interface will be loaded once the user provides a valid alignment file  <br />
-<em>(WARN: remember the difference between <code>interleaved</code> and <code>sequential</code> files).</em></li>
-</ul>
-
-<p><img src="./images/fs_phyml_menu.png" alt="enter image description here" title="" /></p>
-
-<blockquote>
-  <p>You can move between menus using the <code>+</code> and <code>-</code> key on your keyboard and pressing <code>enter</code> to confirm the command. </p>
-
-  <p>To modify a command (i.e. modify the substitution model from the default to GTR):</p>
-
-<pre><code> [M] ................. Model of nucleotide substitution  HKY85
-</code></pre>
-
-  <p>you need to press the following sequence of keys on your keyboard:</p>
-
-  <p><code>m</code> + <code>enter</code> |   The model will be changed into F84 <br />
-  <code>m</code> + <code>enter</code> |   The model will be changed into TN93 <br />
-  <code>m</code> + <code>enter</code> |   The model will be changed into GTR  </p>
-
-  <p>The same procedure applies for all the other commands. </p>
-</blockquote>
-
-<ul>
-<li><strong>Command Line</strong>: this interface allows the user to set all the configuration parameters in one single step, dynamically but not interactively.</li>
-</ul>
-
-<blockquote>
-  <p>You an find more informations here: <br />
-  <a href="http://www.atgc-montpellier.fr/phyml/usersguide.php?type=command">http://www.atgc-montpellier.fr/phyml/usersguide.php?type=command</a></p>
-</blockquote>
+<p>We select the model with the lowest AIC value. In this case, <strong>GTR + Gamma</strong></p>
 
 <hr />
 
-<h4 id="references">References</h4>
-
-<ol>
-<li>PhyML, a tool for biologists <a href="http://www2.cnrs.fr/en/454.htm">http://www2.cnrs.fr/en/454.htm</a></li>
-</ol>
+<p>This exercise can also be solved using <a href="https://github.com/ddarriba/jmodeltest2">jmodeltest</a> which performs automatically phylogenetic tree reconstructions with every model and extra parameters (i.e. invariant sites, gamma).</p>
 
 <hr />
 
+<div class="panel panel-default">
+    <div class="panel-heading">Tasks</div>
+    <div class="panel-body">
+    <ol>
+      <li>Which model is the best (including HKY+Gamma), based on the AIC criterion?</li>
+      <li>What about adding invariant sites (+I)?</li>
+    </ol>
+    </div>
+</div>
 </div>
             <!--<p class="text-center">
               <br />
-              <a target="_blank" href="/_docs/howto_PhyML.md" class="btn btn-default githubEditButton" role="button">
+              <a target="_blank" href="/_docs/solutions_phyml_2.md" class="btn btn-default githubEditButton" role="button">
                 <i class="fa fa-pencil fa-lg"></i> Improve this page
               </a>
           </p>-->
@@ -340,20 +416,65 @@
 
   
   
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
     <ul class="pager">
       
-        <li class="previous disabled">
-          <a>
+        
+        
+        <li class="previous">
+          <a href="/2017-ACGT-Tutorials/docs/solutions_phyml_1/">
             <span aria-hidden="true">&larr;</span> Previous
           </a>
         </li>
       
 
       
-        
-        
-        <li class="next">
-          <a href="/2017-ACGT-Tutorials/docs/howto_PaML/">
+        <li class="next disabled">
+          <a>
             Next <span aria-hidden="true">&rarr;</span>
           </a>
         </li>

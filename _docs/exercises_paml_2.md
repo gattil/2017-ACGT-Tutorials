@@ -1,11 +1,11 @@
 ---
-title: Exercise 3
+title: Exercise 6
 permalink: /docs/exercises_paml_2/
 redirect_from: /index.html
 
 ---
 **Site-models**.
-Choose a dataset from publication 1 and fit the following site models to your data: 
+Choose a dataset from publication 1 and fit the following site models to your data:
 M1, M2, M3, M7, M8a, and M8 (always estimate branch lengths by ML).
 Model M0 was already fitted above (make sure you have the output file).
 Note: M8a is model M8 with ω for the discrete category fixed to 1.
