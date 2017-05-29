@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>How to use PhyML</title>
+    <meta name="description" content="Getting started with PhyML">
+
+
+    <link rel="stylesheet" href="/2017-PhyML-PAML-Tutorials/css/main.css">
+    <link rel="stylesheet" href="/2017-PhyML-PAML-Tutorials/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500" type="text/css">
+
+
+    <link rel="shortcut icon" href="/2017-PhyML-PAML-Tutorials/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>How to use PhyML | ACGT Tutorials</title>
+<meta property="og:title" content="How to use PhyML" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Getting started with PhyML" />
+<meta property="og:description" content="Getting started with PhyML" />
+<link rel="canonical" href="http://lorenzogatti.me//2017-PhyML-PAML-Tutorials/docs/howto_PhyML/" />
+<meta property="og:url" content="http://lorenzogatti.me//2017-PhyML-PAML-Tutorials/docs/howto_PhyML/" />
+<meta property="og:site_name" content="ACGT Tutorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-05-29T14:42:55+02:00" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"WebPage","headline":"How to use PhyML","datePublished":"2017-05-29T14:42:55+02:00","dateModified":"2017-05-29T14:42:55+02:00","description":"Getting started with PhyML","url":"http://lorenzogatti.me//2017-PhyML-PAML-Tutorials/docs/howto_PhyML/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://lorenzogatti.me//2017-PhyML-PAML-Tutorials/docs/howto_PhyML/">
+    <link rel="alternate" type="application/rss+xml" title="ACGT Tutorials" href="http://lorenzogatti.me//2017-PhyML-PAML-Tutorials/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/2017-PhyML-PAML-Tutorials/docs/home/">
+                <!--<span><img src="/2017-PhyML-PAML-Tutorials/img/logonav.png" style="margin-top: -14px; width:40px;"></span>--> ACGT Tutorials
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <!--
+                <li  class="active" ><a href="/2017-PhyML-PAML-Tutorials/docs/exercises/">Exercises</a></li>
+                <li ><a href="/2017-PhyML-PAML-Tutorials">Blog</a></li>
+                <li  class="active" ><a href="/2017-PhyML-PAML-Tutorials/docs/solutions/">Solutions</a></li>
+                <li  class="active" ><a href="/2017-PhyML-PAML-Tutorials/docs/HPC/">HPC</a></li>
+                <li  class="active" ><a href="/2017-PhyML-PAML-Tutorials/docs/home/about/">About</a></li>-->
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/gattil/2017-PhyML-PAML-Tutorials"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+          Getting Started
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item active" href="/2017-PhyML-PAML-Tutorials/docs/howto_PhyML/">How to use PhyML</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/howto_PaML/">How to use the PaML</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/howto_CLI/">How to use the terminal command line</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/howto_Format_Data/">Data formats in bioinformatics</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/howto_Visualize_Data/">How to visualise phylogenetic trees and alignments</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+          Day 1 - Phylogenetic tree reconstruction
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/exercises_phyml_0/">Exercise 1 - Parameter estimation</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/exercises_phyml_1/">Exercise 2 - Tree topologies</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/exercises_phyml_2/">Exercise 3 - Model comparison</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+          Day 2 - Detecting positive selection
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/exercises_paml_0/">Exercise 1</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/exercises_paml_1/">Exercise 2</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/exercises_paml_2/">Exercise 3</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+          Day 3 - Detecting episodic selection
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials/docs/exercises_paml_3/">Exercise 4</a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+          Day 3 - Pipelines exercises
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials"></a>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+          Solutions
+        </a>
+      </h4>
+    </div>
+    <div id="collapse-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <ul class="list-group">
+        
+          
+          
+          <a class="list-group-item " href="/2017-PhyML-PAML-Tutorials"></a>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>How to use PhyML</h1>
+            <div id="markdown-content-container"><h2 id="getting-started-with-phyml">Getting started with PhyML</h2>
+
+<p><strong>1. Download the software</strong></p>
+
+<p><a href="http://www.atgc-montpellier.fr/phyml/download.php">http://www.atgc-montpellier.fr/phyml/download.php</a></p>
+
+<p><strong>2. Launch</strong></p>
+
+<ul>
+<li><p><code>PhyML</code> runs without a <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">graphical user interface (GUI)</a>. Therefore, you will see a black terminal window appearing on your monitor anytime you execute it. </p>
+
+<p><em>WARN: On Windows machines <code>PhyML</code> will close automatically the terminal session at the end of the execution.</em> </p></li>
+</ul>
+
+<blockquote>
+  <p><strong>PhyML execution can be started either with:</strong></p>
+
+  <ul>
+  <li>a double click on <em>PhyML-3.1_your-operative-system</em> (i.e. <code>PhyML-3.1_linux64</code>)</li>
+  </ul>
+
+  <p><strong>or:</strong> </p>
+
+  <ul>
+  <li>dragging <em>PhyML-3.1_your-operative-system</em> (i.e. <code>PhyML-3.1_linux64</code>) into a new terminal session (on OsX and Linux operative systems search for <code>Terminal</code>).</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<p><strong>3. Interface</strong> </p>
+
+<p>PhyML allows the user to prepare the analysis with two different interfaces:</p>
+
+<ul>
+<li><strong>Menu</strong>: this interface will be loaded once the user provides a valid alignment file  <br />
+<em>(WARN: remember the difference between <code>interleaved</code> and <code>sequential</code> files).</em></li>
+</ul>
+
+<p><img src="./images/fs_phyml_menu.png" alt="enter image description here" title="" /></p>
+
+<blockquote>
+  <p>You can move between menus using the <code>+</code> and <code>-</code> key on your keyboard and pressing <code>enter</code> to confirm the command. </p>
+
+  <p>To modify a command (i.e. modify the substitution model from the default to GTR):</p>
+
+<pre><code> [M] ................. Model of nucleotide substitution  HKY85
+</code></pre>
+
+  <p>you need to press the following sequence of keys on your keyboard:</p>
+
+  <p><code>m</code> + <code>enter</code> |   The model will be changed into F84 <br />
+  <code>m</code> + <code>enter</code> |   The model will be changed into TN93 <br />
+  <code>m</code> + <code>enter</code> |   The model will be changed into GTR  </p>
+
+  <p>The same procedure applies for all the other commands. </p>
+</blockquote>
+
+<ul>
+<li><strong>Command Line</strong>: this interface allows the user to set all the configuration parameters in one single step, dynamically but not interactively.</li>
+</ul>
+
+<blockquote>
+  <p>You an find more informations here: <br />
+  <a href="http://www.atgc-montpellier.fr/phyml/usersguide.php?type=command">http://www.atgc-montpellier.fr/phyml/usersguide.php?type=command</a></p>
+</blockquote>
+
+<hr />
+
+<h4 id="references">References</h4>
+
+<ol>
+<li>PhyML, a tool for biologists <a href="http://www2.cnrs.fr/en/454.htm">http://www2.cnrs.fr/en/454.htm</a></li>
+</ol>
+
+<hr />
+
+</div>
+            <!--<p class="text-center">
+              <br />
+              <a target="_blank" href="/_docs/howto_PhyML.md" class="btn btn-default githubEditButton" role="button">
+                <i class="fa fa-pencil fa-lg"></i> Improve this page
+              </a>
+          </p>-->
+            <hr>
+            
+
+
+
+
+
+  
+  
+    <ul class="pager">
+      
+        <li class="previous disabled">
+          <a>
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/2017-PhyML-PAML-Tutorials/docs/howto_PaML/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+    </div>
+    <div class="clear"></div>
+    
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center" style="font-size:12px">
+            Copyright © 2017  Applied Computationa Genomics Team &mdash; Lorenzo Gatti (<a href="https://github.com/gattil">@gattil</a>) &amp; Maria Anisimova |
+            Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/2017-PhyML-PAML-Tutorials'
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/2017-PhyML-PAML-Tutorials/js/bootstrap.min.js "></script>
+<script src="/2017-PhyML-PAML-Tutorials/js/typeahead.bundle.min.js "></script>
+
+<script src="/2017-PhyML-PAML-Tutorials/js/main.js "></script>
+
+</body>
+
+</html>
