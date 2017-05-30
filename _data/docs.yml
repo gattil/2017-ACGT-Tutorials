@@ -5,16 +5,19 @@
       - howto_CLI
       - howto_Format_Data
       - howto_Visualize_Data
+      
 - title: Day 1 - Phylogenetic tree reconstruction
   docs:
       - exercises_phyml_0
       - exercises_phyml_1
       - exercises_phyml_2
+
 - title: Day 2 - Detecting positive selection
   docs:
       - exercises_paml_0
       - exercises_paml_1
       - exercises_paml_2
+
 - title: Day 3 - Detecting episodic selection
   docs:
       - exercises_paml_3
@@ -22,6 +25,7 @@
 - title: Day 3 - Pipelines exercises
   docs:
       - pipelines
+
 - title: Solutions
   docs:
       - solutions_phyml_0

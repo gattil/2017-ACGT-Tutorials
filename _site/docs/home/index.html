@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Welcome</title>
-    <meta name="description" content="Schedule 1st day">
+    <meta name="description" content="Getting started">
 
 
     <link rel="stylesheet" href="/2017-ACGT-Tutorials/css/main.css">
@@ -23,15 +23,15 @@
 <title>Welcome | ACGT Tutorials</title>
 <meta property="og:title" content="Welcome" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Schedule 1st day" />
-<meta property="og:description" content="Schedule 1st day" />
+<meta name="description" content="Getting started" />
+<meta property="og:description" content="Getting started" />
 <link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/home/" />
 <meta property="og:url" content="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/home/" />
 <meta property="og:site_name" content="ACGT Tutorials" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-05-30T12:04:43+02:00" />
+<meta property="article:published_time" content="2017-05-30T14:41:25+02:00" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Welcome","datePublished":"2017-05-30T12:04:43+02:00","dateModified":"2017-05-30T12:04:43+02:00","description":"Schedule 1st day","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/home/"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"Welcome","datePublished":"2017-05-30T14:41:25+02:00","dateModified":"2017-05-30T14:41:25+02:00","description":"Getting started","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/home/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -247,132 +247,56 @@
 
         <div class="col-md-8">
             <h1>Welcome</h1>
-            <div id="markdown-content-container"><h5 id="schedule-1st-day">Schedule 1<sup>st</sup> day</h5>
+            <div id="markdown-content-container"><h2 id="getting-started">Getting started</h2>
 
-<h5 id="schedule-2nd-day">Schedule 2<sup>nd</sup> day</h5>
+<p><a href="https://pages.github.com">GitHub Pages</a> can automatically generate and serve the website for you.
+Let’s say you have a username/organisation <code class="highlighter-rouge">my-org</code> and project <code class="highlighter-rouge">my-proj</code>; if you locate Jekyll source under <code class="highlighter-rouge">docs</code> folder of master branch in your repo <code class="highlighter-rouge">github.com/my-org/my-proj</code>, the website will be served on <code class="highlighter-rouge">my-org.github.io/my-proj</code>.
+The good thing about coupling your documentation with the source repo is, whenever you merge features with regarding content to master branch, it will also be published in the webpage instantly.</p>
 
-<h5 id="schedule-3rd-day">Schedule 3<sup>rd</sup> day</h5>
+<ol>
+  <li>Just download the source from <a href="https://github.com/aksakalli/jekyll-doc-theme/master">github.com/aksakalli/jekyll-doc-theme</a> into your repo under <code class="highlighter-rouge">docs</code> folder.</li>
+  <li>Edit site settings in  <code class="highlighter-rouge">_config.yml</code> file according to your project.</li>
+  <li>Replace <code class="highlighter-rouge">favicon.ico</code> and <code class="highlighter-rouge">img/logonav.png</code> with your own logo.</li>
+</ol>
 
-<table>
-  <thead>
-    <tr>
-      <th>Time</th>
-      <th>Topic</th>
-      <th>Lecturer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>08:30 - 09:15</td>
-      <td>Introduction on detecting positive selection</td>
-      <td>Maria</td>
-    </tr>
-    <tr>
-      <td>09:15 - 09:45</td>
-      <td>Tutorial session on detecting positive selection using small dataset</td>
-      <td>Lorenzo</td>
-    </tr>
-    <tr>
-      <td>09:45 - 10:05</td>
-      <td>Break</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>10:05 - 10:30</td>
-      <td>Small introduction on how to design a computational pipeline for phylogenetic analyses</td>
-      <td>Maria &amp; Lorenzo</td>
-    </tr>
-    <tr>
-      <td>10:30 - 11:00</td>
-      <td>Tutorial session using a small dataset</td>
-      <td>Lorenzo</td>
-    </tr>
-    <tr>
-      <td>11:00 - 12:00</td>
-      <td>Open Q/A session + hands-on using participants’ datasets</td>
-      <td>Maria &amp; Lorenzo</td>
-    </tr>
-  </tbody>
-</table>
+<h2 id="writing-content">Writing content</h2>
 
-<hr />
+<h3 id="docs">Docs</h3>
 
-<h3 id="installation">Installation</h3>
+<p>Docs are <a href="https://jekyllrb.com/docs/collections/">collections</a> of pages stored under <code class="highlighter-rouge">_docs</code> folder. To create a new page:</p>
 
-<h5 id="software">Software</h5>
+<p><strong>1.</strong> Create a new Markdown as <code class="highlighter-rouge">_docs/my-page.md</code> and write <a href="https://jekyllrb.com/docs/frontmatter/">front matter</a> &amp; content such as:</p>
 
-<h6 id="phylogenetic-tree-reconstruction">Phylogenetic tree reconstruction</h6>
+<div class="highlighter-rouge"><pre class="highlight"><code>---
+title: My Page
+permalink: /docs/my-page/
+---
 
-<div class="btn-group">
-  <a href="#" class="btn btn-default">Download PhyML</a>
-  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-  <ul class="dropdown-menu">
-    <li><a href="http://www.atgc-montpellier.fr/download/binaries/phyml/PhyML-3.1.zip" class="btn btn-default active">Cross Platform</a></li>
-  </ul>
+Hello World!
+</code></pre>
 </div>
 
-<div class="btn-group">
-  <a href="#" class="btn btn-default">Download codonPhyML</a>
-  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-  <ul class="dropdown-menu">
-    <li><a href="https://sourceforge.net/projects/codonphyml/files/codonPhyML_macosx_binary_1.00_201407.24/download" class="btn btn-default active">MacOs &amp; Linux</a></li>
-    <li><a href="https://sourceforge.net/projects/codonphyml/files/codonPhyML_windows_binary_1.00_201407.24.exe/download" class="btn btn-default active">Windows</a></li>
-  </ul>
+<p><strong>2.</strong> Add the pagename to <code class="highlighter-rouge">_data/docs.yml</code> file in order to list in docs navigation panel:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- title: My Group Title
+  docs:
+  - my-page
+</code></pre>
 </div>
 
-<h6 id="positive-selection-analyses">Positive selection analyses</h6>
+<h3 id="blog-posts">Blog posts</h3>
 
-<div class="btn-group">
-  <a href="#" class="btn btn-default">Download PaML</a>
-  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-  <ul class="dropdown-menu">
-    <li><a href="http://abacus.gene.ucl.ac.uk/software/paml4.8a.macosx.tgz" class="btn btn-default active">MacOs &amp; Linux</a></li>
-    <li><a href="http://abacus.gene.ucl.ac.uk/software/paml4.9e.tgz" class="btn btn-default active">Windows</a></li>
-  </ul>
-</div>
+<p>Add a new Markdown file such as <code class="highlighter-rouge">2017-05-09-my-post.md</code> and write the content similar to other post examples.</p>
 
-<h6 id="sequence-alignment-visualizers">Sequence alignment visualizers</h6>
+<h3 id="pages">Pages</h3>
 
-<div class="btn-group">
-  <a href="#" class="btn btn-default">Download AliView</a>
-  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-  <ul class="dropdown-menu">
-    <li><a href="http://www.ormbunkar.se/aliview/downloads/mac/" class="btn btn-default active">MacOs</a></li>
-    <li><a href="http://www.ormbunkar.se/aliview/downloads/windows/windows-version-1.18.1/" class="btn btn-default active">Windows</a></li>
-    <li><a href="http://www.ormbunkar.se/aliview/downloads/linux/linux-version-1.18.1/" class="btn btn-default active">Linux</a></li>
-  </ul>
-</div>
+<p>The home page is located under <code class="highlighter-rouge">index.html</code> file. You can change the content or design completely different welcome page for your taste. (You can use <a href="http://getbootstrap.com/components/">bootstrap componenets</a>)</p>
 
-<h6 id="tree-visualizers">Tree visualizers</h6>
-
-<div class="btn-group">
-  <a href="#" class="btn btn-default">Download FigTree</a>
-  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-  <ul class="dropdown-menu">
-    <li><a href="http://tree.bio.ed.ac.uk/download.html?name=figtree&amp;id=96&amp;num=1" class="btn btn-default active">MacOs</a></li>
-    <li><a href="http://tree.bio.ed.ac.uk/download.html?name=figtree&amp;id=96&amp;num=2" class="btn btn-default active">Windows</a></li>
-    <li><a href="http://tree.bio.ed.ac.uk/download.html?name=figtree&amp;id=96&amp;num=3" class="btn btn-default active">Linux</a></li>
-  </ul>
-</div>
-
-<h5 id="tutorials">Tutorials</h5>
-
-<p><a href="https://github.com/gattil/2016_FiPS_Tutorials/zipball/master" class="btn btn-default active">Download <strong>ZIP File</strong></a>
-<a href="https://github.com/gattil/2016_FiPS_Tutorials/tarball/master" class="btn btn-default active">Download <strong>TAR Ball</strong></a>
-<a href="https://github.com/gattil/2016_FiPS_Tutorials" class="btn btn-default active">Clone from <strong>GitHub</strong></a></p>
-
-<hr />
-
-<p><strong>Licence</strong></p>
-
-<p><small> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Except as contained in this notice, the name(s) of the above copyright holders and institutions shall not be used to endorse or promote products derived from this software without specific prior written permission. </small></p>
-<p><small> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </small></p>
-
-<p><small>This project is maintained by <a href="https://github.com/gattil">gattil</a> </small></p>
+<p>In order to add a new page, create a new html or markdown file under root directory and link it in <code class="highlighter-rouge">_includes/topnav.html</code>.</p>
 </div>
             <!--<p class="text-center">
               <br />
-              <a target="_blank" href="/_docs/index.md" class="btn btn-default githubEditButton" role="button">
+              <a target="_blank" href="/_docs/archive/archive_index.md" class="btn btn-default githubEditButton" role="button">
                 <i class="fa fa-pencil fa-lg"></i> Improve this page
               </a>
           </p>-->

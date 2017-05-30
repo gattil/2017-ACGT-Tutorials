@@ -1,6 +1,6 @@
 ---
 title: Welcome
-permalink: /docs/home/
+permalink: /
 redirect_from: /index.html
 ---
 
@@ -12,8 +12,8 @@ redirect_from: /index.html
 
 | Time                    | Topic                                        | Lecturer |
 |-------------------------|----------------------------------------------|----------|
-| 08:30 - 09:15 | Introduction on detecting positive selection | Maria |
-| 09:15 - 09:45 | Tutorial session on detecting positive selection using small dataset | Lorenzo |
+| 08:30 - 09:15 | Introduction on episodic positive selection | Maria |
+| 09:15 - 09:45 | Tutorial session on detecting episodic positive selection using small dataset | Lorenzo |
 | 09:45 - 10:05 | Break | |
 | 10:05 - 10:30 | Small introduction on how to design a computational pipeline for phylogenetic analyses | Maria & Lorenzo |
 | 10:30 - 11:00 | Tutorial session using a small dataset | Lorenzo |
