@@ -4,20 +4,204 @@ permalink: /
 redirect_from: /index.html
 ---
 
-##### Schedule 1<sup>st</sup> day
+### Schedule
 
-##### Schedule 2<sup>nd</sup> day
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#day1" data-toggle="tab">Tuesday June 13th</a></li>
+  <li><a href="#day2" data-toggle="tab">Wednesday June 14th</a></li>
+  <li><a href="#day3" data-toggle="tab">Thursday June 15th</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade active in" id="day1">
 
-##### Schedule 3<sup>rd</sup> day
+  <p><center><strong>Modelling molecular evolution and phylogenetics</strong></center></p>
 
-| Time                    | Topic                                        | Lecturer |
-|-------------------------|----------------------------------------------|----------|
-| 08:30 - 09:15 | Introduction on episodic positive selection | Maria |
-| 09:15 - 09:45 | Tutorial session on detecting episodic positive selection using small dataset | Lorenzo |
-| 09:45 - 10:05 | Break | |
-| 10:05 - 10:30 | Small introduction on how to design a computational pipeline for phylogenetic analyses | Maria & Lorenzo |
-| 10:30 - 11:00 | Tutorial session using a small dataset | Lorenzo |
-| 11:00 - 12:00 | Open Q/A session + hands-on using participants’ datasets | Maria & Lorenzo |
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Topic</th>
+        <th>Lecturer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08:30 - 09:30</td>
+        <td>Markov models of substitutions</td>
+        <td>Maria</td>
+      </tr>
+      <tr>
+        <td>09:30 - 10:00</td>
+        <td>Demo: Data formats and visualisation</td>
+        <td>Lorenzo</td>
+      </tr>
+      <tr>
+        <td>10:00 - 10:30</td>
+        <td>Break</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>10:30 - 11:30</td>
+        <td>Hypothesis testing, model selection</td>
+        <td>Maria</td>
+      </tr>
+      <tr>
+        <td>11:30 - 12:00</td>
+        <td>Practical: Hypothesis testing, model selection with PHYML</td>
+        <td>Lorenzo</td>
+      </tr>
+      <tr>
+        <td>12:00 - 13:30</td>
+        <td>Lunch</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>13:30 - 14:15</td>
+        <td>Tree-thinking quizz (in small groups)</td>
+        <td>Maria (?)</td>
+      </tr>
+      <tr>
+        <td>14:15 - 15:15</td>
+        <td>Phylogenetic inference</td>
+        <td>Maria</td>
+      </tr>
+      <tr>
+        <td>15:15 - 15:45</td>
+        <td>Break</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>15:45 - 17:00</td>
+        <td>ML tree inference: Exercises with PHYML</td>
+        <td>Lorenzo</td>
+      </tr>
+      <tr>
+        <td>17:00</td>
+        <td>The end</td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tab-pane fade" id="day2">
+
+  <p><center><strong> Detecting positive selection with codon models </strong></center></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Topic</th>
+        <th>Lecturer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08:30 - 09:15</td>
+        <td>Natural selection and codon models</td>
+        <td>Maria</td>
+      </tr>
+      <tr>
+        <td>09:15 - 10:00</td>
+        <td>Exercises with PAML (basics, one ratio model)</td>
+        <td>Lorenzo</td>
+      </tr>
+      <tr>
+        <td>10:00 - 10:30</td>
+        <td>Break</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>10:30 - 11:15</td>
+        <td>tba</td>
+        <td>Maria</td>
+      </tr>
+      <tr>
+        <td>11:15 - 12:00</td>
+        <td>Exercises with PAML (branch models)</td>
+        <td>Lorenzo</td>
+      </tr>
+      <tr>
+        <td>12:00 - 13:30</td>
+        <td>Lunch</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>13:30 - 15:00</td>
+        <td>Site models, detecting residues under selection</td>
+        <td>Maria</td>
+      </tr>
+      <tr>
+        <td>15:00 - 15:30</td>
+        <td>break</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>15:30 - 17:00</td>
+        <td>Exercises with PAML (site models)</td>
+        <td>Lorenzo</td>
+      </tr>
+      <tr>
+        <td>17:00</td>
+        <td>The end</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>18:00</td>
+        <td>Pizza night?</td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tab-pane fade" id="day3">
+
+  <p><center><strong> Detecting episodic positive selection & Bio-Pipeline building </strong></center></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Topic</th>
+        <th>Lecturer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08:30 - 09:15</td>
+        <td>Introduction on episodic positive selection</td>
+        <td>Maria</td>
+      </tr>
+      <tr>
+        <td>09:15 - 09:45</td>
+        <td>Tutorial session on detecting episodic positive selection using small dataset</td>
+        <td>Lorenzo</td>
+      </tr>
+      <tr>
+        <td>09:45 - 10:05</td>
+        <td>Break</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>10:05 - 10:30</td>
+        <td>Small introduction on how to design a computational pipeline for phylogenetic analyses</td>
+        <td>Maria</td>
+      </tr>
+      <tr>
+        <td>10:30 - 11:00</td>
+        <td>Tutorial session using a small dataset</td>
+        <td>Lorenzo</td>
+      </tr>
+      <tr>
+        <td>11:00 - 12:00</td>
+        <td>Open Q/A session + hands-on using participants’ datasets</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
 
 ---
 

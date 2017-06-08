@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Data formats in bioinformatics</title>
-    <meta name="description" content="Getting started with bioinformatics data formats">
+    <meta name="description" content="Sequence and (Multi) Sequence Alignment formats">
 
 
     <link rel="stylesheet" href="/2017-ACGT-Tutorials/css/main.css">
@@ -23,15 +23,15 @@
 <title>Data formats in bioinformatics | ACGT Tutorials</title>
 <meta property="og:title" content="Data formats in bioinformatics" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Getting started with bioinformatics data formats" />
-<meta property="og:description" content="Getting started with bioinformatics data formats" />
+<meta name="description" content="Sequence and (Multi) Sequence Alignment formats" />
+<meta property="og:description" content="Sequence and (Multi) Sequence Alignment formats" />
 <link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/howto_Format_Data/" />
 <meta property="og:url" content="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/howto_Format_Data/" />
 <meta property="og:site_name" content="ACGT Tutorials" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-05-30T14:46:57+02:00" />
+<meta property="article:published_time" content="2017-06-08T18:54:33+02:00" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Data formats in bioinformatics","datePublished":"2017-05-30T14:46:57+02:00","dateModified":"2017-05-30T14:46:57+02:00","description":"Getting started with bioinformatics data formats","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/howto_Format_Data/"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"Data formats in bioinformatics","datePublished":"2017-06-08T18:54:33+02:00","dateModified":"2017-06-08T18:54:33+02:00","description":"Sequence and (Multi) Sequence Alignment formats","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/howto_Format_Data/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -247,7 +247,101 @@
 
         <div class="col-md-8">
             <h1>Data formats in bioinformatics</h1>
-            <div id="markdown-content-container"><h2 id="getting-started-with-bioinformatics-data-formats">Getting started with bioinformatics data formats</h2>
+            <div id="markdown-content-container"><h3 id="sequence-and-multi-sequence-alignment-formats">Sequence and (Multi) Sequence Alignment formats</h3>
+
+<h4 id="fasta">Fasta</h4>
+
+<h4 id="phylip">Phylip</h4>
+
+<hr />
+
+<h3 id="tree-formats">Tree formats</h3>
+
+<h4 id="newick">Newick</h4>
+
+<p>The Newick tree format (or Newick notation or New Hampshire tree format) is a way of representing graph trees with edge lengths using parentheses and commas. It is a standard for representing trees in computer-readable form makes use of the correspondence between trees and nested parentheses, noticed in 1857 by the famous English mathematician Arthur Cayley. If we have this rooted tree:</p>
+
+<center><img src="../../img/intro_tree_example.png" alt="" title="" width="75%" /></center>
+
+<p>then in the tree file it is represented by the following sequence of printable characters:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>(B,(A,C,E),D);
+</code></pre>
+</div>
+
+<p>Branch lengths can be incorporated into a tree by putting a real number, with or without decimal point, after a node and preceded by a colon. This represents the length of the branch immediately below that node. Thus the above tree might have lengths represented as:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>(B:6.0,(A:5.0,C:3.0,E:4.0):5.0,D:11.0);
+</code></pre>
+</div>
+
+<h4 id="phyloxml">PhyloXML</h4>
+
+<p>PhyloXML is an XML language for the analysis, exchange, and storage of phylogenetic trees (or networks) and associated data. The structure of phyloXML is described by XML Schema Definition (XSD) language.</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;phyloxml</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+<span class="na">xsi:schemaLocation=</span><span class="s">"http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd"</span>
+<span class="na">xmlns=</span><span class="s">"http://www.phyloxml.org"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;phylogeny</span> <span class="na">rooted=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;name&gt;</span>example from Prof. Joe Felsenstein's book "Inferring Phylogenies"<span class="nt">&lt;/name&gt;</span>
+ <span class="nt">&lt;description&gt;</span>MrBayes based on MAFFT alignment<span class="nt">&lt;/description&gt;</span>
+ <span class="nt">&lt;clade&gt;</span>
+    <span class="nt">&lt;clade</span> <span class="na">branch_length=</span><span class="s">"0.06"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;confidence</span> <span class="na">type=</span><span class="s">"probability"</span><span class="nt">&gt;</span>0.88<span class="nt">&lt;/confidence&gt;</span>
+       <span class="nt">&lt;clade</span> <span class="na">branch_length=</span><span class="s">"0.102"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;name&gt;</span>A<span class="nt">&lt;/name&gt;</span>
+       <span class="nt">&lt;/clade&gt;</span>
+       <span class="nt">&lt;clade</span> <span class="na">branch_length=</span><span class="s">"0.23"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;name&gt;</span>B<span class="nt">&lt;/name&gt;</span>
+       <span class="nt">&lt;/clade&gt;</span>
+    <span class="nt">&lt;/clade&gt;</span>
+    <span class="nt">&lt;clade</span> <span class="na">branch_length=</span><span class="s">"0.4"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;name&gt;</span>C<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;/clade&gt;</span>
+ <span class="nt">&lt;/clade&gt;</span>
+<span class="nt">&lt;/phylogeny&gt;</span>
+<span class="nt">&lt;/phyloxml&gt;</span>
+</code></pre>
+</div>
+<p><a href="https://en.wikipedia.org/wiki/PhyloXML">More informations</a></p>
+
+<hr />
+<h3 id="multi-purpose-file-formats">Multi purpose file formats</h3>
+
+<h4 id="nexux">Nexux</h4>
+
+<p>The NEXUS file format (usually .nex or .nxs) is widely used in bioinformatics. Several popular phylogenetic programs such as PAUP*, MrBayes, Mesquite, MacClade and SplitsTree use this format.</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>#NEXUS
+Begin data;
+Dimensions ntax=4 nchar=15;
+Format datatype=dna missing=? gap=-;
+Matrix
+A   atgctagctagctcg
+B   atgcta??tag-tag
+C   atgttagctag-tgg
+D   atgttagctag-tag           
+;
+End;
+
+Begin Taxa;
+  Taxalabels A B C D;
+End;
+
+Begin Trees;
+  Tree tree1 = ((A,B),(C,D));
+End;
+
+</code></pre>
+</div>
+
+<hr />
+
+<ol>
+  <li>http://evolution.genetics.washington.edu/phylip/newicktree.html</li>
+  <li>https://en.wikipedia.org/wiki/Nexus_file</li>
+  <li>https://en.wikipedia.org/wiki/PhyloXML</li>
+</ol>
 </div>
             <!--<p class="text-center">
               <br />
