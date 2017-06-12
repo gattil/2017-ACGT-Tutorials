@@ -4,13 +4,17 @@ permalink: /docs/howto_PhyML/
 redirect_from: /index.html
 ---
 
-## Getting started with PhyML
+##### Getting started with PhyML
 
-<p><strong>1. Download the software</strong></p>
+<hr>
+
+###### **1. Download the software**
 
 <p><a href="http://www.atgc-montpellier.fr/phyml/download.php">http://www.atgc-montpellier.fr/phyml/download.php</a></p>
 
-<p><strong>2. Launch</strong></p>
+<hr>
+
+###### **2. Launch**
 
 <ul>
 <li><p><code>PhyML</code> runs without a <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">graphical user interface (GUI)</a>. Therefore, you will see a black terminal window appearing on your monitor anytime you execute it. </p>
@@ -34,7 +38,7 @@ redirect_from: /index.html
 
 <hr>
 
-<p><strong>3. Interface</strong> </p>
+###### **3. Interface**
 
 <p>PhyML allows the user to prepare the analysis with two different interfaces:</p>
 
@@ -43,7 +47,7 @@ redirect_from: /index.html
 <em>(WARN: remember the difference between <code>interleaved</code> and <code>sequential</code> files).</em></li>
 </ul>
 
-<p><img src="./images/fs_phyml_menu.png" alt="enter image description here" title=""></p>
+<p><img src="../../img/fs_phyml_menu.png" alt="enter image description here" title=""></p>
 
 <blockquote>
   <p>You can move between menus using the <code>+</code> and <code>-</code> key on your keyboard and pressing <code>enter</code> to confirm the command. </p>

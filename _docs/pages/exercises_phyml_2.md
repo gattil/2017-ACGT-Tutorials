@@ -5,14 +5,14 @@ redirect_from: /index.html
 ---
 
 ##### Inferring phylogenies using maximum likelihood
-###### **Observing the effect of substitution models the final inferred tree topology.**
+In this tutorial you will be guided in using PhyML and its extension, CodonPhyML, to solve common phylogenetic problems. For some of the following exercises there might be more than one single solution.
 
-<br>
+---
 
-#### Goals
+##### **Goal: Observing the effect of substitution models the final inferred tree topology.**
 
-In this exercise you are asked to compare different substitution models (and their variations) on the same dataset.
 
+In this exercise you are asked to infer the phylogenetic tree on the same dataset using different substitution models (and their variations). Use now GTR+Gamma and JC+Gamma, GTR, HKY and JC.
 
 ---
 
@@ -24,7 +24,7 @@ In this exercise you are asked to compare different substitution models (and the
           <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">View</a></li>
-            <li><a href="#">Download</a></li>
+            <li><a href="../../tutorial_data/tutorial01_phyml/primates-nt.phy">Download</a></li>
           </ul>
         </div>
     </div>
@@ -207,3 +207,7 @@ In addition, set the following options:
     </ol>
     </div>
 </div>
+
+---
+
+This exercise was prepared by *Maria Anisimova*

@@ -4,20 +4,63 @@ permalink: /docs/howto_Format_Data/
 redirect_from: /index.html
 ---
 
-
 ### Sequence and (Multi) Sequence Alignment formats
 
-#### Fasta
+#### 1. Fasta
 
-#### Phylip
+In bioinformatics, FASTA format is a text-based format for representing either nucleotide sequences or peptide sequences, in which nucleotides or amino acids are represented using single-letter codes. The format also allows for sequence names and comments to precede the sequences.
+
+    >SEQUENCE_1
+    MTEITAAMVKELRESTGAGMMDCKNALSETNGDFDKAVQLLREKGLGKAAKKADRLAAEG
+    LVSVKVSDDFTIAAMRPSYLSYEDLDMTFVENEYKALVAELEKENEERRRLKDPNKPEHK
+    IPQFASRKQLSDAILKEAEEKIKEELKAQGKPEKIWDNIIPGKMNSFIADNSQLDSKLTL
+    MGQFYVMDDKKTVEQVIAEKEKEFGGKIKIVEFICFEVGEGLEKKTEDFAAEVAAQL
+    >SEQUENCE_2
+    SATVSEINSETDFVAKNDQFIALTKDTTAHIQSNSLQSVEELHSSTINGVKFEEYLKSQI
+    ATIGENLVVRRFATLKAGANGVVNGYIHTNGRVGVVIAAACDSAEVASKSRDLLRQICMH
+
+#### 2. Phylip
+
+The PHYLIP file format stores a multiple sequence alignment. The format was originally defined and used in Joe Felsenstein’s PHYLIP package, and has since been supported by several other bioinformatics tools (e.g., RAxML).
+
+The PHYLIP format comes in two different flavors: **Interleaved** and **Sequential**
+
+1. Interleaved format
+
+    ```
+    5    42
+    Turkey     AAGCTNGGGC ATTTCAGGGT
+    Salmo gair AAGCCTTGGC AGTGCAGGGT
+    H. Sapiens ACCGGTTGGC CGTTCAGGGT
+    Chimp      AAACCCTTGC CGTTACGCTT
+    Gorilla    AAACCCTTGC CGGTACGCTT
+
+    GAGCCCGGGC AATACAGGGT AT
+    GAGCCGTGGC CGGGCACGGT AT
+    ACAGGTTGGC CGTTCAGGGT AA
+    AAACCGAGGC CGGGACACTC AT
+    AAACCATTGC CGGTACGCTT AA
+    ```
+
+2. Sequential format
+
+    ```
+    5    42
+    Turkey     AAGCTNGGGC ATTTCAGGGT GAGCCCGGGC AATACAGGGT AT
+    Salmo gair AAGCCTTGGC AGTGCAGGGT GAGCCGTGGC CGGGCACGGT AT
+    H. Sapiens ACCGGTTGGC CGTTCAGGGT ACAGGTTGGC CGTTCAGGGT AA
+    Chimp      AAACCCTTGC CGTTACGCTT AAACCGAGGC CGGGACACTC AT
+    Gorilla    AAACCCTTGC CGGTACGCTT AAACCATTGC CGGTACGCTT AA
+    ```
+
 
 ---
 
 ### Tree formats
 
-#### Newick  
+#### 1. Newick  
 
-The Newick tree format (or Newick notation or New Hampshire tree format) is a way of representing graph trees with edge lengths using parentheses and commas. It is a standard for representing trees in computer-readable form makes use of the correspondence between trees and nested parentheses, noticed in 1857 by the famous English mathematician Arthur Cayley. If we have this rooted tree:
+The Newick tree format (or Newick notation or New Hampshire tree format) is a way of representing graph trees with edge lengths using parentheses and commas. It is a standard for representing trees in computer-readable form that makes use of the correspondence between trees and nested parentheses, noticed in 1857 by the famous English mathematician Arthur Cayley. If we have this rooted tree:
 
 <center><img src="../../img/intro_tree_example.png" alt="" title="" width="75%"></center>
 
@@ -29,7 +72,7 @@ Branch lengths can be incorporated into a tree by putting a real number, with or
 
     (B:6.0,(A:5.0,C:3.0,E:4.0):5.0,D:11.0);
 
-#### PhyloXML
+#### 2. PhyloXML
 
 PhyloXML is an XML language for the analysis, exchange, and storage of phylogenetic trees (or networks) and associated data. The structure of phyloXML is described by XML Schema Definition (XSD) language.
 
@@ -63,7 +106,7 @@ xmlns="http://www.phyloxml.org">
 ---
 ### Multi purpose file formats
 
-#### Nexux
+#### 1. Nexux
 
 The NEXUS file format (usually .nex or .nxs) is widely used in bioinformatics. Several popular phylogenetic programs such as PAUP*, MrBayes, Mesquite, MacClade and SplitsTree use this format.
 
@@ -91,7 +134,8 @@ End;
 ```
 
 ---
-
+1. https://en.wikipedia.org/wiki/FASTA_format
+1. http://scikit-bio.org/docs/0.2.3/generated/skbio.io.phylip.html
 1. http://evolution.genetics.washington.edu/phylip/newicktree.html
 2. https://en.wikipedia.org/wiki/Nexus_file
 3. https://en.wikipedia.org/wiki/PhyloXML

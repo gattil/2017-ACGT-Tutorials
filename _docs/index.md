@@ -32,7 +32,7 @@ redirect_from: /index.html
       </tr>
       <tr>
         <td>09:30 - 10:00</td>
-        <td>Demo: Data formats and visualisation</td>
+        <td>Practical: Data formats and visualisation</td>
         <td>Lorenzo</td>
       </tr>
       <tr>
@@ -57,7 +57,7 @@ redirect_from: /index.html
       </tr>
       <tr>
         <td>13:30 - 14:15</td>
-        <td>Tree-thinking quizz (in small groups)</td>
+        <td>Practical: Tree-thinking quiz (in small groups)</td>
         <td>Maria (?)</td>
       </tr>
       <tr>
@@ -103,7 +103,7 @@ redirect_from: /index.html
       </tr>
       <tr>
         <td>09:15 - 10:00</td>
-        <td>Exercises with PAML (basics, one ratio model)</td>
+        <td>Practical: Exercises with PAML (basics, one ratio model)</td>
         <td>Lorenzo</td>
       </tr>
       <tr>
@@ -118,7 +118,7 @@ redirect_from: /index.html
       </tr>
       <tr>
         <td>11:15 - 12:00</td>
-        <td>Exercises with PAML (branch models)</td>
+        <td>Practical: Exercises with PAML (branch models)</td>
         <td>Lorenzo</td>
       </tr>
       <tr>
@@ -138,7 +138,7 @@ redirect_from: /index.html
       </tr>
       <tr>
         <td>15:30 - 17:00</td>
-        <td>Exercises with PAML (site models)</td>
+        <td>Practical: Exercises with PAML (site models)</td>
         <td>Lorenzo</td>
       </tr>
       <tr>
@@ -174,7 +174,7 @@ redirect_from: /index.html
       </tr>
       <tr>
         <td>09:15 - 09:45</td>
-        <td>Tutorial session on detecting episodic positive selection using small dataset</td>
+        <td>Practical: Detecting episodic positive selection using small dataset</td>
         <td>Lorenzo</td>
       </tr>
       <tr>
@@ -189,7 +189,7 @@ redirect_from: /index.html
       </tr>
       <tr>
         <td>10:30 - 11:00</td>
-        <td>Tutorial session using a small dataset</td>
+        <td>Practical: Tutorial session on how to build pipelines</td>
         <td>Lorenzo</td>
       </tr>
       <tr>

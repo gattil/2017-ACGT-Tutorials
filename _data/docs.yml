@@ -1,30 +1,36 @@
 - title: Getting Started
   docs:
       - howto_PhyML
-      - howto_PaML
+      #- howto_PaML
       - howto_CLI
       - howto_Format_Data
       - howto_Visualize_Data
-      
+
 - title: Day 1 - Phylogenetic tree reconstruction
   docs:
       - exercises_phyml_0
       - exercises_phyml_1
       - exercises_phyml_2
+      - exercises_phyml_3
+      - exercises_phyml_4
+      - exercises_phyml_5
+      - exercises_phyml_6
+      - exercises_phyml_7
+
 
 - title: Day 2 - Detecting positive selection
   docs:
-      - exercises_paml_0
-      - exercises_paml_1
-      - exercises_paml_2
+      #- exercises_paml_0
+      #- exercises_paml_1
+      #- exercises_paml_2
 
-- title: Day 3 - Detecting episodic selection
+- title: Day 3.1 - Detecting episodic selection
   docs:
-      - exercises_paml_3
+      #- exercises_paml_3
 
-- title: Day 3 - Pipelines exercises
+- title: Day 3.2 - Pipelines exercises
   docs:
-      - pipelines
+      #- pipelines_1
 
 - title: Solutions
   docs:

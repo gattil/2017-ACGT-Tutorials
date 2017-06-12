@@ -5,11 +5,11 @@ redirect_from: /index.html
 ---
 
 ##### Inferring phylogenies using maximum likelihood
-###### **Observing the effect of parameter estimation from data on the inferred tree topology.**
+In this tutorial you will be guided in using PhyML and its extension, CodonPhyML, to solve common phylogenetic problems. For some of the following exercises there might be more than one single solution.
 
-<br>
+---
 
-#### Goals
+##### **Goal: Observing the effect of parameter estimation from data on the inferred tree topology.**
 
 In this exercise you are asked to run PhyML twice in order to compare the effect of estimating nucleotide frequencies from the used dataset vs. optimising them with a maximum likelihood (ML) approach.
 
@@ -24,7 +24,7 @@ In this exercise you are asked to run PhyML twice in order to compare the effect
           <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">View</a></li>
-            <li><a href="#">Download</a></li>
+            <li><a href="../../tutorial_data/tutorial01_phyml/primates-nt.phy">Download</a></li>
           </ul>
         </div>
     </div>
@@ -65,3 +65,7 @@ Set the model to HKY+Gamma, estimating the transition/transversion ratio and the
 <span class="label label-default">maximum-likelihood</span>
 <span class="label label-default">parameter-estimation</span>
 </p>
+
+---
+
+This exercise was prepared by *Maria Anisimova*

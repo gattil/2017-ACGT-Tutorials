@@ -2,15 +2,14 @@
 title: Exercise 2 - Tree topologies
 permalink: /docs/exercises_phyml_1/
 redirect_from: /index.html
-
 ---
 
 ##### Inferring phylogenies using maximum likelihood
-###### **Observing the effect of tree search routines on the initial inferred tree topology.**
+In this tutorial you will be guided in using PhyML and its extension, CodonPhyML, to solve common phylogenetic problems. For some of the following exercises there might be more than one single solution.
 
-<br>
+---
 
-#### Goals
+##### **Goal: Observing the effect of tree search routines on the initial inferred tree topology.**
 
 In this exercise you are asked to optimise the tree topology on the substitution parameters obtained using ML performing a tree search (i.e. NNI, SPR, TBR) on the initial tree topology.
 
@@ -24,7 +23,7 @@ In this exercise you are asked to optimise the tree topology on the substitution
           <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">View</a></li>
-            <li><a href="#">Download</a></li>
+            <li><a href="../../tutorial_data/tutorial01_phyml/primates-nt.phy">Download</a></li>
           </ul>
         </div>
     </div>
@@ -54,3 +53,7 @@ By default PhyML builds a BioNJ tree and uses this tree as a starting tree. Run 
 <span class="label label-default">maximum-likelihood</span>
 <span class="label label-default">parameter-estimation</span>
 </p>
+
+---
+
+This exercise was prepared by *Maria Anisimova*

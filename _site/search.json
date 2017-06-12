@@ -12,15 +12,7 @@
     
     
     {
-      "title": "How to use the PaML",
-      "url": "/2017-ACGT-Tutorials/docs/howto_PaML/"
-
-    },
-  
-    
-    
-    {
-      "title": "How to use the terminal command line",
+      "title": "How to use Unix and the CLI",
       "url": "/2017-ACGT-Tutorials/docs/howto_CLI/"
 
     },
@@ -67,51 +59,51 @@
 
     },
   
-
-  
     
     
     {
-      "title": "Exercise 4",
-      "url": "/2017-ACGT-Tutorials/docs/exercises_paml_0/"
+      "title": "Exercise 4 - Branch support",
+      "url": "/2017-ACGT-Tutorials/docs/exercises_phyml_3/"
 
     },
   
     
     
     {
-      "title": "Exercise 5",
-      "url": "/2017-ACGT-Tutorials/docs/exercises_paml_1/"
+      "title": "Exercise 5 - Command line",
+      "url": "/2017-ACGT-Tutorials/docs/exercises_phyml_4/"
 
     },
   
     
     
     {
-      "title": "Exercise 6",
-      "url": "/2017-ACGT-Tutorials/docs/exercises_paml_2/"
+      "title": "Exercise 6 - Inferring ML phylogenies with codon models",
+      "url": "/2017-ACGT-Tutorials/docs/exercises_phyml_5/"
 
     },
-  
-
   
     
     
     {
-      "title": "Exercise 7",
-      "url": "/2017-ACGT-Tutorials/docs/exercises_paml_3/"
+      "title": "Exercise 7 - Inferring ML phylogenies using real datasets",
+      "url": "/2017-ACGT-Tutorials/docs/exercises_phyml_6/"
 
     },
-  
-
   
     
     
     {
-      "title": "",
-      "url": "/2017-ACGT-Tutorials"
+      "title": "Exercise 8 - Re-Analyze published datasets",
+      "url": "/2017-ACGT-Tutorials/docs/exercises_phyml_7/"
 
     },
+  
+
+  
+
+  
+
   
 
   

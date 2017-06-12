@@ -9,9 +9,8 @@ redirect_from: /index.html
 
 <br>
 
-#### Goals
-
 In this exercise you are asked to run PhyML twice in order to compare the effect of estimating nucleotide frequencies from the used dataset vs. optimising them with a maximum likelihood (ML) approach.
+
 
 ---
 

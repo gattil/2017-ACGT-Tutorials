@@ -1,10 +1,9 @@
 ---
-title: How to use the terminal command line
+title: How to use Unix and the CLI
 permalink: /docs/howto_CLI/
 redirect_from: /index.html
 ---
-
-## What is computing with Unix?
+###  What is computing with Unix?
 
 <p>
 Unix is a family of operating systems and
@@ -721,3 +720,10 @@ Windows users can use
 <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>
 to connect to another computer over ssh.
 </p>
+
+
+---
+
+### Resources
+
+1. http://matt.might.net/articles/basic-unix/
