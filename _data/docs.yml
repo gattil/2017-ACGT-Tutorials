@@ -1,10 +1,10 @@
 - title: Getting Started
   docs:
-      - howto_PhyML
-      #- howto_PaML
-      - howto_CLI
       - howto_Format_Data
       - howto_Visualize_Data
+      - howto_PhyML
+      #- howto_PaML
+      #- howto_CLI
 
 - title: Day 1 - Phylogenetic tree reconstruction
   docs:

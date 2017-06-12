@@ -4,22 +4,6 @@
     
     
     {
-      "title": "How to use PhyML",
-      "url": "/2017-ACGT-Tutorials/docs/howto_PhyML/"
-
-    },
-  
-    
-    
-    {
-      "title": "How to use Unix and the CLI",
-      "url": "/2017-ACGT-Tutorials/docs/howto_CLI/"
-
-    },
-  
-    
-    
-    {
       "title": "Data formats in bioinformatics",
       "url": "/2017-ACGT-Tutorials/docs/howto_Format_Data/"
 
@@ -30,6 +14,14 @@
     {
       "title": "How to visualise phylogenetic trees and alignments",
       "url": "/2017-ACGT-Tutorials/docs/howto_Visualize_Data/"
+
+    },
+  
+    
+    
+    {
+      "title": "How to use PhyML",
+      "url": "/2017-ACGT-Tutorials/docs/howto_PhyML/"
 
     },
   
