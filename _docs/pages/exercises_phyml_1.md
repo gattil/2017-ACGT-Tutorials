@@ -29,6 +29,7 @@ In this exercise you are asked to optimise the tree topology on the substitution
     </div>
 </div>
 
+---
 
 By default PhyML builds a BioNJ tree and uses this tree as a starting tree. Run PhyML without the tree-search, so that all model parameters are optimized on the BioNJ tree.
 
@@ -39,8 +40,9 @@ By default PhyML builds a BioNJ tree and uses this tree as a starting tree. Run 
     <div class="panel-body">
     <ol>
       <li>Compare the ML and the BioNJ trees and the model estimates (HKY+Gamma) obtained for the two trees.</li>
-      <li>Compare the likelihood of the ML and NJ trees.</li>
+      <li>Compare the likelihood of the ML and BioNJ trees.</li>
       <li>What do you observe and why?</li>
+      
     </ol>
     </div>
 </div>
