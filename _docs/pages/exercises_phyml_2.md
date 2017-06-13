@@ -136,7 +136,7 @@ In addition, set the following options:
 
 ##### Third Run
 
-Run PhyML with the substitution model set to **JC**, nucleotide frequencies are estimated empirically from the dataset, and executing the tree search routines.
+Run PhyML with the substitution model set to **JC** and executing the tree search routines.
 
 In addition, set the following options:
 
