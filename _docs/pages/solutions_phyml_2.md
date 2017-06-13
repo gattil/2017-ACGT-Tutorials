@@ -122,7 +122,7 @@ In this exercise you are asked to compare different substitution models (and the
 tree:</p>
 
 <blockquote>
-  <p><script type="math/tex" id="MathJax-Element-11">k = (2 \ast \text{no. taxa} - 2) + \text{no. parameters in substitution model} + \text{extra parameters}</script></p>
+  <p><script type="math/tex" id="MathJax-Element-11">k = (2 \ast \text{no. taxa} - 3) + \text{no. parameters in substitution model} + \text{extra parameters}</script></p>
 
   <p>substitution models: JC = 0 parameters | HKY = 4 parameters | GTR = 8 <br>
   parameters <br>
