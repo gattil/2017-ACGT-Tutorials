@@ -147,8 +147,8 @@ redirect_from: /index.html
         <td> </td>
       </tr>
       <tr>
-        <td>18:00</td>
-        <td>Pizza night?</td>
+        <td>17:15</td>
+        <td>After the course, we will head to a pub in town for anyone who fancies joining!</td>
         <td> </td>
       </tr>
     </tbody>
