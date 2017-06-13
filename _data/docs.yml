@@ -8,6 +8,7 @@
 
 - title: Day 1 - Phylogenetic tree reconstruction
   docs:
+      - slides_day_1
       - exercises_phyml_0
       - exercises_phyml_1
       - exercises_phyml_2
