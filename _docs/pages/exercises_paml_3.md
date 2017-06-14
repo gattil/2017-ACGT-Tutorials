@@ -4,16 +4,24 @@ permalink: /docs/exercises_paml_3/
 redirect_from: /index.html
 
 ---
-**Episodic selection**.
-Choose a dataset from publication 1 and fit the following site models to your data:
-M1, M2, M3, M7, M8a, and M8 (always estimate branch lengths by ML).
-Model M0 was already fitted above (make sure you have the output file).
-Note: M8a is model M8 with ω for the discrete category fixed to 1.
-Which models are nested?
-Perform likelihood ratio tests (LRTs) of nested hypotheses.
-How many degrees of freedom do you use each time to test for significance of the LRT statistic?
-Do your tests suggest positive selection?
-Interpret the ML estimates relevant to selective pressure.
-If LRTs suggest positive selection, which sites are inferred by the Bayesian approach to be under positive selection (models M2 and M8)?
-Do NEB and BEB agree on the sites inferred?
-Compare results from the LRT comparing M7 vs M8 and the LRT comparing M8a vs M8. Are they both significant (or both non-significant)? If they are both significant, does the Bayesian approach predict the same sites?
+<p>We will use codeml program from PAML by Ziheng Yang. Use the command line mode for the tasks below. First, you need to understand which control file options to use. Next, try to reproduce the same analyses with codeml</code>.</p>
+
+<p>You will need a dataset of homologous protein-coding DNA sequences (starting with the 1<sup>st</sup> codon position and ending with the 3<sup>rd</sup>). We will use data from published articles and will regenerate published results: </p>
+
+<ul>
+<li><p>Branch models: Yang, Z. 1998. Likelihood ratio tests for detecting positive selection and application to primate lysozyme evolution. Mol. Biol. Evol. 15:568-573.  <br>
+Data 1: <a href="../../tutorial_data/tutorial02_paml/lysozymeSmall.nuc">lysozymeSmall.nuc</a>Tree 1: <a href="../../tutorial_data/tutorial02_paml/lysozymeSmall.trees">lysozymeSmall.trees</a> </p></li>
+</ul>
+
+
+---
+
+**Branch-site models**.
+
+Use the small lysozyme example to to fit branch-site models:
+1. For each branch of the tree (one at a time) perform the LRT comparing model MA (ω is estimated) with model MA (fixed ω = 1).
+2. How many LRTs are significant?
+3. How many LRTs remain significant after the Bonferroni correction for multiple testing?
+4. What can you tell about the evolution of your gene from the ML estimates obtained after the multiple LRT procedure?
+
+> To get the Bonferroni corrected/adjusted p value, divide the original α-value by the number of analyses on the dependent variable. The researcher assigns a new alpha for the set of dependent variables (or analyses) that does not exceed some critical value: αcritical= 1 - (1 – αaltered)k, where k = the number of comparisons on the same dependent variable
