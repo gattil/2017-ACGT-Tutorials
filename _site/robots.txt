@@ -1,1 +1,1 @@
-Sitemap: http://lorenzogatti.me/2017-ACGT-Tutorials/sitemap.xml
+Sitemap: http://localhost:4000/2017-ACGT-Tutorials/sitemap.xml

@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Exercise 4</title>
-    <meta name="description" content="The simple codon model with constant   . Choose a dataset from publication 1 and fit model M0 - the most simple codon model with constant  over time and site...">
+    <title>Exercise 1 - Simple codon model</title>
+    <meta name="description" content="We will use codeml program from PAML by Ziheng Yang. Use the command line mode for the tasks below. First, you need to understand which control file options ...">
 
 
     <link rel="stylesheet" href="/2017-ACGT-Tutorials/css/main.css">
@@ -20,23 +20,23 @@
 
     <link rel="shortcut icon" href="/2017-ACGT-Tutorials/favicon.ico?1">
     <!-- Begin Jekyll SEO tag v2.2.3 -->
-<title>Exercise 4 | ACGT Tutorials</title>
-<meta property="og:title" content="Exercise 4" />
+<title>Exercise 1 - Simple codon model | ACGT Tutorials</title>
+<meta property="og:title" content="Exercise 1 - Simple codon model" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The simple codon model with constant . Choose a dataset from publication 1 and fit model M0 - the most simple codon model with constant over time and sites. Run model M0 twice: first with branch lengths fixed to those in the tree file, and once with branch lengths estimated by ML. Compare the optimised log-likelihoods for the two runs? In which case is it higher? Why? Next, study the output file for the run with estimated branch lengths: Do you observe the codon frequency bias? Study the statistics of nucleotide usage for different codon positions. Which position displays the most bias? Why? What is the ML estimate of the transition-transversion ratio ? What is the ML estimate of the -ratio? How do you interpret these ML estimates?" />
-<meta property="og:description" content="The simple codon model with constant . Choose a dataset from publication 1 and fit model M0 - the most simple codon model with constant over time and sites. Run model M0 twice: first with branch lengths fixed to those in the tree file, and once with branch lengths estimated by ML. Compare the optimised log-likelihoods for the two runs? In which case is it higher? Why? Next, study the output file for the run with estimated branch lengths: Do you observe the codon frequency bias? Study the statistics of nucleotide usage for different codon positions. Which position displays the most bias? Why? What is the ML estimate of the transition-transversion ratio ? What is the ML estimate of the -ratio? How do you interpret these ML estimates?" />
-<link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/exercises_paml_0/" />
-<meta property="og:url" content="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/exercises_paml_0/" />
+<meta name="description" content="We will use codeml program from PAML by Ziheng Yang. Use the command line mode for the tasks below. First, you need to understand which control file options to use. Next, try to reproduce the same analyses with codeml&lt;/code&gt;." />
+<meta property="og:description" content="We will use codeml program from PAML by Ziheng Yang. Use the command line mode for the tasks below. First, you need to understand which control file options to use. Next, try to reproduce the same analyses with codeml&lt;/code&gt;." />
+<link rel="canonical" href="http://localhost:4000/2017-ACGT-Tutorials/docs/exercises_paml_0/" />
+<meta property="og:url" content="http://localhost:4000/2017-ACGT-Tutorials/docs/exercises_paml_0/" />
 <meta property="og:site_name" content="ACGT Tutorials" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-06-13T16:46:28+02:00" />
+<meta property="article:published_time" content="2017-06-14T05:46:40+02:00" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Exercise 4","datePublished":"2017-06-13T16:46:28+02:00","dateModified":"2017-06-13T16:46:28+02:00","description":"The simple codon model with constant . Choose a dataset from publication 1 and fit model M0 - the most simple codon model with constant over time and sites. Run model M0 twice: first with branch lengths fixed to those in the tree file, and once with branch lengths estimated by ML. Compare the optimised log-likelihoods for the two runs? In which case is it higher? Why? Next, study the output file for the run with estimated branch lengths: Do you observe the codon frequency bias? Study the statistics of nucleotide usage for different codon positions. Which position displays the most bias? Why? What is the ML estimate of the transition-transversion ratio ? What is the ML estimate of the -ratio? How do you interpret these ML estimates?","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/exercises_paml_0/"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"Exercise 1 - Simple codon model","datePublished":"2017-06-14T05:46:40+02:00","dateModified":"2017-06-14T05:46:40+02:00","description":"We will use codeml program from PAML by Ziheng Yang. Use the command line mode for the tasks below. First, you need to understand which control file options to use. Next, try to reproduce the same analyses with codeml&lt;/code&gt;.","url":"http://localhost:4000/2017-ACGT-Tutorials/docs/exercises_paml_0/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/exercises_paml_0/">
-    <link rel="alternate" type="application/rss+xml" title="ACGT Tutorials" href="http://lorenzogatti.me/2017-ACGT-Tutorials/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/2017-ACGT-Tutorials/docs/exercises_paml_0/">
+    <link rel="alternate" type="application/rss+xml" title="ACGT Tutorials" href="http://localhost:4000/2017-ACGT-Tutorials/feed.xml" />
 </head>
 
 
@@ -176,6 +176,18 @@
     <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <ul class="list-group">
         
+          
+          
+          <a class="list-group-item active" href="/2017-ACGT-Tutorials/docs/exercises_paml_0/">Exercise 1 - Simple codon model</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-ACGT-Tutorials/docs/exercises_paml_1/">Exercise 2 - Branch models</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-ACGT-Tutorials/docs/exercises_paml_2/">Exercise 3 - Site models</a>
+        
       </ul>
     </div>
   </div>
@@ -242,13 +254,47 @@
         </div>
 
         <div class="col-md-8">
-            <h1>Exercise 4</h1>
-            <div id="markdown-content-container"><p><strong>The simple codon model with constant  <script type="math/tex">\omega</script></strong> . Choose a dataset from publication 1 and fit model M0 - the most simple codon model with constant <script type="math/tex">\omega</script> over time and sites. Run model M0 twice: first with branch lengths fixed to those in the tree file, and once with branch lengths estimated by ML.
-Compare the optimised log-likelihoods for the two runs? In which case is it higher? Why?
-Next, study the output file for the run with estimated branch lengths:
-Do you observe the codon frequency bias?
-Study the statistics of nucleotide usage for different codon positions. Which position displays the most bias? Why?
-What is the ML estimate of the transition-transversion ratio <script type="math/tex">\kappa</script>? What is the ML estimate of the <script type="math/tex">\omega</script>-ratio? How do you interpret these ML estimates?</p>
+            <h1>Exercise 1 - Simple codon model</h1>
+            <div id="markdown-content-container"><p>We will use codeml program from PAML by Ziheng Yang. Use the command line mode for the tasks below. First, you need to understand which control file options to use. Next, try to reproduce the same analyses with codeml&lt;/code&gt;.</p>
+
+<p>You will need a dataset of homologous protein-coding DNA sequences (starting with the 1<sup>st</sup> codon position and ending with the 3<sup>rd</sup>). We will use data from published articles and will regenerate published results: </p>
+
+<ul>
+<li><p>Site-models: Yang, Z., R. Nielsen, N. Goldman, A.-M. K. Pedersen. 2000. Codon-substitution models for heterogeneous selection pressure at amino acid sites. Genetics 155: 431-449. <br />
+
+Data 1: <a href="../../tutorial_data/tutorial02_paml/bglobin.nuc">bglobin.nuc</a> Tree 1:
+<a href="../../tutorial_data/tutorial02_paml/bglobin.trees">bglobin.tree</a> <br />
+
+Data 2: <a href="../../tutorial_data/tutorial02_paml/HIVenvSweden.nuc">HIVenvSweden.nuc</a>
+Tree 2: <a href="../../tutorial_data/tutorial02_paml/HIVenvSweden.trees">HIVenvSweden.trees</a><br />
+
+Data 3: <a href="../../tutorial_data/tutorial02_paml/adh.nuc">adh.nuc</a>
+ Tree 3: <a href="../../tutorial_data/tutorial02_paml/adh.trees">adh.trees</a></p></li>
+</ul>
+
+<hr />
+
+<p><strong>The simple codon model with constant ω</strong>.</p>
+
+<ol>
+  <li>
+    <p>Choose a dataset from the publication above and fit model <strong>M0</strong> - the most simple codon model with constant ω over time and sites. Run model M0 twice: first with branch lengths fixed to those in the tree file, and once with branch lengths estimated by ML.</p>
+  </li>
+  <li>
+    <p>Compare the optimised log-likelihoods for the two runs? In which case is it higher? Why?</p>
+  </li>
+  <li>
+    <p>Next, study the output file for the run with estimated branch lengths: Do you observe the codon frequency bias?</p>
+  </li>
+  <li>
+    <p>Study the statistics of nucleotide usage for different codon positions. Which position displays the most bias? Why?
+What is the ML estimate of the transition-transversion ratio κ? What is the ML estimate of the ω-ratio? How do you interpret these ML estimates?</p>
+  </li>
+</ol>
+
+<hr />
+
+<p>Please refer to PaML/codeml documentation available <a href="http://abacus.gene.ucl.ac.uk/software/pamlDOC.pdf">here</a></p>
 </div>
             <!--<p class="text-center">
               <br />
@@ -301,22 +347,29 @@ What is the ML estimate of the transition-transversion ratio <script type="math/
 
   
   
+    <ul class="pager">
+      
+        
+        
+        <li class="previous">
+          <a href="/2017-ACGT-Tutorials/docs/exercises_phyml_7/">
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
 
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
+      
+        
+        
+        <li class="next">
+          <a href="/2017-ACGT-Tutorials/docs/exercises_paml_1/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+    </div>
+    <div class="clear"></div>
+    
 
         </div>
 

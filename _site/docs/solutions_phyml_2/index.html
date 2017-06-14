@@ -25,18 +25,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Inferring phylogenies using maximum likelihood Observing the effect of substitution models the final inferred tree topology." />
 <meta property="og:description" content="Inferring phylogenies using maximum likelihood Observing the effect of substitution models the final inferred tree topology." />
-<link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/solutions_phyml_2/" />
-<meta property="og:url" content="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/solutions_phyml_2/" />
+<link rel="canonical" href="http://localhost:4000/2017-ACGT-Tutorials/docs/solutions_phyml_2/" />
+<meta property="og:url" content="http://localhost:4000/2017-ACGT-Tutorials/docs/solutions_phyml_2/" />
 <meta property="og:site_name" content="ACGT Tutorials" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-06-13T16:46:28+02:00" />
+<meta property="article:published_time" content="2017-06-14T05:46:40+02:00" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Solution 3 - Model comparison","datePublished":"2017-06-13T16:46:28+02:00","dateModified":"2017-06-13T16:46:28+02:00","description":"Inferring phylogenies using maximum likelihood Observing the effect of substitution models the final inferred tree topology.","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/solutions_phyml_2/"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"Solution 3 - Model comparison","datePublished":"2017-06-14T05:46:40+02:00","dateModified":"2017-06-14T05:46:40+02:00","description":"Inferring phylogenies using maximum likelihood Observing the effect of substitution models the final inferred tree topology.","url":"http://localhost:4000/2017-ACGT-Tutorials/docs/solutions_phyml_2/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/solutions_phyml_2/">
-    <link rel="alternate" type="application/rss+xml" title="ACGT Tutorials" href="http://lorenzogatti.me/2017-ACGT-Tutorials/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/2017-ACGT-Tutorials/docs/solutions_phyml_2/">
+    <link rel="alternate" type="application/rss+xml" title="ACGT Tutorials" href="http://localhost:4000/2017-ACGT-Tutorials/feed.xml" />
 </head>
 
 
@@ -176,6 +176,18 @@
     <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <ul class="list-group">
         
+          
+          
+          <a class="list-group-item " href="/2017-ACGT-Tutorials/docs/exercises_paml_0/">Exercise 1 - Simple codon model</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-ACGT-Tutorials/docs/exercises_paml_1/">Exercise 2 - Branch models</a>
+        
+          
+          
+          <a class="list-group-item " href="/2017-ACGT-Tutorials/docs/exercises_paml_2/">Exercise 3 - Site models</a>
+        
       </ul>
     </div>
   </div>
@@ -273,87 +285,89 @@
 <h5 id="execution-2">Execution</h5>
 
 <table>
-<thead>
-<tr>
-  <th>Model</th>
-  <th>Log-likelihood</th>
-  <th>Parameters</th>
-  <th>AIC</th>
-</tr>
-</thead>
-<tbody><tr>
-  <td>JC</td>
-  <td>-6379.66383</td>
-  <td>38</td>
-  <td>12835.32766</td>
-</tr>
-<tr>
-  <td>JC_I</td>
-  <td>-6311.41650</td>
-  <td>39</td>
-  <td>12700.833</td>
-</tr>
-<tr>
-  <td>JC_G</td>
-  <td>-6304.38084</td>
-  <td>39</td>
-  <td>12686.76168</td>
-</tr>
-<tr>
-  <td>JC_G_I</td>
-  <td>-6304.35263</td>
-  <td>40</td>
-  <td>12688.70526</td>
-</tr>
-<tr>
-  <td>HKY</td>
-  <td>-6251.43051</td>
-  <td>42</td>
-  <td>12586.86102</td>
-</tr>
-<tr>
-  <td>HKY_I</td>
-  <td>-6180.09689</td>
-  <td>43</td>
-  <td>12446.19378</td>
-</tr>
-<tr>
-  <td>HKY_G</td>
-  <td>-6172.58045</td>
-  <td>43</td>
-  <td>12431.1609</td>
-</tr>
-<tr>
-  <td>HKY_G_I</td>
-  <td>-6172.52896</td>
-  <td>44</td>
-  <td>12433.05792</td>
-</tr>
-<tr>
-  <td>GTR</td>
-  <td>-6241.48788</td>
-  <td>46</td>
-  <td>12574.97576</td>
-</tr>
-<tr>
-  <td>GTR_I</td>
-  <td>-6171.17472</td>
-  <td>47</td>
-  <td>12436.34944</td>
-</tr>
-<tr>
-  <td>GTR_G</td>
-  <td>-6163.87291</td>
-  <td>47</td>
-  <td>12421.74582</td>
-</tr>
-<tr>
-  <td>GTR_G_I</td>
-  <td>-6172.52896</td>
-  <td>48</td>
-  <td>12441.05792</td>
-</tr>
-</tbody></table>
+	<thead>
+		<tr>
+			<th>Model</th>
+			<th>Log-likelihood</th>
+			<th>Parameters</th>
+			<th>AIC</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>JC</td>
+			<td>-6379.66383</td>
+			<td>37</td>
+			<td>12833.32766</td>
+		</tr>
+		<tr>
+			<td>JC_I</td>
+			<td>-6311.4165</td>
+			<td>38</td>
+			<td>12698.833</td>
+		</tr>
+		<tr>
+			<td>JC_G</td>
+			<td>-6304.38084</td>
+			<td>38</td>
+			<td>12684.76168</td>
+		</tr>
+		<tr>
+			<td>JC_G_I</td>
+			<td>-6304.35263</td>
+			<td>39</td>
+			<td>12686.70526</td>
+		</tr>
+		<tr>
+			<td>HKY</td>
+			<td>-6251.43051</td>
+			<td>41</td>
+			<td>12584.86102</td>
+		</tr>
+		<tr>
+			<td>HKY_I</td>
+			<td>-6180.09689</td>
+			<td>42</td>
+			<td>12444.19378</td>
+		</tr>
+		<tr>
+			<td>HKY_G</td>
+			<td>-6172.58045</td>
+			<td>42</td>
+			<td>12429.1609</td>
+		</tr>
+		<tr>
+			<td>HKY_G_I</td>
+			<td>-6172.52896</td>
+			<td>43</td>
+			<td>12431.05792</td>
+		</tr>
+		<tr>
+			<td>GTR</td>
+			<td>-6241.48788</td>
+			<td>45</td>
+			<td>12572.97576</td>
+		</tr>
+		<tr>
+			<td>GTR_I</td>
+			<td>-6171.17472</td>
+			<td>46</td>
+			<td>12434.34944</td>
+		</tr>
+		<tr>
+			<td>GTR_G</td>
+			<td>-6163.87291</td>
+			<td>46</td>
+			<td>12419.74582</td>
+		</tr>
+		<tr>
+			<td>GTR_G_I</td>
+			<td>-6172.52896</td>
+			<td>47</td>
+			<td>12439.05792</td>
+		</tr>
+	</tbody>
+</table>
 
 <p>The number of parameters are computed in the following way for a rooted <br />
 tree:</p>
@@ -370,7 +384,7 @@ tree:</p>
 <p>We compute the AIC value as follows:</p>
 
 <blockquote>
-  <p><script type="math/tex" id="MathJax-Element-12">AIC = 2(k) - \log(L)</script></p>
+  <p><script type="math/tex" id="MathJax-Element-12">AIC = 2(k) - 2\log(L)</script></p>
 </blockquote>
 
 <hr />
@@ -409,6 +423,12 @@ tree:</p>
 
 
 
+
+  
+  
+
+  
+  
 
   
   

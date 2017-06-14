@@ -35,87 +35,89 @@ In this exercise you are asked to compare different substitution models (and the
 <h5 id="execution-2">Execution</h5>
 
 <table>
-<thead>
-<tr>
-  <th>Model</th>
-  <th>Log-likelihood</th>
-  <th>Parameters</th>
-  <th>AIC</th>
-</tr>
-</thead>
-<tbody><tr>
-  <td>JC</td>
-  <td>-6379.66383</td>
-  <td>38</td>
-  <td>12835.32766</td>
-</tr>
-<tr>
-  <td>JC_I</td>
-  <td>-6311.41650</td>
-  <td>39</td>
-  <td>12700.833</td>
-</tr>
-<tr>
-  <td>JC_G</td>
-  <td>-6304.38084</td>
-  <td>39</td>
-  <td>12686.76168</td>
-</tr>
-<tr>
-  <td>JC_G_I</td>
-  <td>-6304.35263</td>
-  <td>40</td>
-  <td>12688.70526</td>
-</tr>
-<tr>
-  <td>HKY</td>
-  <td>-6251.43051</td>
-  <td>42</td>
-  <td>12586.86102</td>
-</tr>
-<tr>
-  <td>HKY_I</td>
-  <td>-6180.09689</td>
-  <td>43</td>
-  <td>12446.19378</td>
-</tr>
-<tr>
-  <td>HKY_G</td>
-  <td>-6172.58045</td>
-  <td>43</td>
-  <td>12431.1609</td>
-</tr>
-<tr>
-  <td>HKY_G_I</td>
-  <td>-6172.52896</td>
-  <td>44</td>
-  <td>12433.05792</td>
-</tr>
-<tr>
-  <td>GTR</td>
-  <td>-6241.48788</td>
-  <td>46</td>
-  <td>12574.97576</td>
-</tr>
-<tr>
-  <td>GTR_I</td>
-  <td>-6171.17472</td>
-  <td>47</td>
-  <td>12436.34944</td>
-</tr>
-<tr>
-  <td>GTR_G</td>
-  <td>-6163.87291</td>
-  <td>47</td>
-  <td>12421.74582</td>
-</tr>
-<tr>
-  <td>GTR_G_I</td>
-  <td>-6172.52896</td>
-  <td>48</td>
-  <td>12441.05792</td>
-</tr>
-</tbody></table>
+	<thead>
+		<tr>
+			<th>Model</th>
+			<th>Log-likelihood</th>
+			<th>Parameters</th>
+			<th>AIC</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>JC</td>
+			<td>-6379.66383</td>
+			<td>37</td>
+			<td>12833.32766</td>
+		</tr>
+		<tr>
+			<td>JC_I</td>
+			<td>-6311.4165</td>
+			<td>38</td>
+			<td>12698.833</td>
+		</tr>
+		<tr>
+			<td>JC_G</td>
+			<td>-6304.38084</td>
+			<td>38</td>
+			<td>12684.76168</td>
+		</tr>
+		<tr>
+			<td>JC_G_I</td>
+			<td>-6304.35263</td>
+			<td>39</td>
+			<td>12686.70526</td>
+		</tr>
+		<tr>
+			<td>HKY</td>
+			<td>-6251.43051</td>
+			<td>41</td>
+			<td>12584.86102</td>
+		</tr>
+		<tr>
+			<td>HKY_I</td>
+			<td>-6180.09689</td>
+			<td>42</td>
+			<td>12444.19378</td>
+		</tr>
+		<tr>
+			<td>HKY_G</td>
+			<td>-6172.58045</td>
+			<td>42</td>
+			<td>12429.1609</td>
+		</tr>
+		<tr>
+			<td>HKY_G_I</td>
+			<td>-6172.52896</td>
+			<td>43</td>
+			<td>12431.05792</td>
+		</tr>
+		<tr>
+			<td>GTR</td>
+			<td>-6241.48788</td>
+			<td>45</td>
+			<td>12572.97576</td>
+		</tr>
+		<tr>
+			<td>GTR_I</td>
+			<td>-6171.17472</td>
+			<td>46</td>
+			<td>12434.34944</td>
+		</tr>
+		<tr>
+			<td>GTR_G</td>
+			<td>-6163.87291</td>
+			<td>46</td>
+			<td>12419.74582</td>
+		</tr>
+		<tr>
+			<td>GTR_G_I</td>
+			<td>-6172.52896</td>
+			<td>47</td>
+			<td>12439.05792</td>
+		</tr>
+	</tbody>
+</table>
 
 
 <p>The number of parameters are computed in the following way for a rooted <br>
@@ -133,7 +135,7 @@ tree:</p>
 <p>We compute the AIC value as follows:</p>
 
 <blockquote>
-  <p><script type="math/tex" id="MathJax-Element-12">AIC = 2(k) - \log(L)</script></p>
+  <p><script type="math/tex" id="MathJax-Element-12">AIC = 2(k) - 2\log(L)</script></p>
 </blockquote>
 
 

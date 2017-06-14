@@ -67,7 +67,7 @@ In this exercise you are asked to optimise the tree topology on the substitution
 
 <p><strong>1. Compare the trees obtained with and without tree-search. What do you observe and why?</strong></p>
 
-<p>The topology inferred without tree search presents a variation in the internal node attribution for the clades (DLangur, Colobus) and (Saki,Titi).</p>
+<p>The topology inferred without tree search presents a variation in the internal node attribution for the clades (Saki,Titi).</p>
 
 <table>
 <thead>
