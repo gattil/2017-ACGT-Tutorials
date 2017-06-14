@@ -29,9 +29,9 @@
 <meta property="og:url" content="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/exercises_paml_3/" />
 <meta property="og:site_name" content="ACGT Tutorials" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-06-15T00:03:14+02:00" />
+<meta property="article:published_time" content="2017-06-15T00:20:42+02:00" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Exercise 7","datePublished":"2017-06-15T00:03:14+02:00","dateModified":"2017-06-15T00:03:14+02:00","description":"We will use codeml program from PAML by Ziheng Yang. Use the command line mode for the tasks below. First, you need to understand which control file options to use. Next, try to reproduce the same analyses with codeml&lt;/code&gt;.","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/exercises_paml_3/"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"Exercise 7","datePublished":"2017-06-15T00:20:42+02:00","dateModified":"2017-06-15T00:20:42+02:00","description":"We will use codeml program from PAML by Ziheng Yang. Use the command line mode for the tasks below. First, you need to understand which control file options to use. Next, try to reproduce the same analyses with codeml&lt;/code&gt;.","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/exercises_paml_3/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -285,7 +285,10 @@ Data 1: <a href="../../tutorial_data/tutorial02_paml/lysozymeSmall.nuc">lysozyme
 </ol>
 
 <blockquote>
-  <p>To get the Bonferroni corrected/adjusted p value, divide the original α-value by the number of analyses on the dependent variable. The researcher assigns a new alpha for the set of dependent variables (or analyses) that does not exceed some critical value: αcritical= 1 - (1 – αaltered)k, where k = the number of comparisons on the same dependent variable</p>
+<a href="http://www.biostathandbook.com/multiplecomparisons.html">About Bonferroni Correction</a>
+<li>Any time you reject a null hypothesis because a P value is less than your critical value, it's possible that you're wrong; the null hypothesis might really be true, and your significant result might be due to chance.</li>
+<li>Instead of setting the critical P level for significance, or alpha, to a certain value (i.e 0.05), you use a lower critical value. If the null hypothesis is true for all of the tests, the probability of getting one result that is significant at this new, lower critical value is 0.05.</li>
+<li>The most common way to correct for multiple testing is with the Bonferroni correction. You find the critical value (alpha) for an individual test by dividing the P-value (i.e. 0.05) by the number of tests. Thus if you are doing 100 statistical tests, the critical value for an individual test would be 0.05/100=0.0005, and you would only consider individual tests with P&lt;0.0005 to be significant.</li>
 </blockquote>
 </div>
             <!--<p class="text-center">

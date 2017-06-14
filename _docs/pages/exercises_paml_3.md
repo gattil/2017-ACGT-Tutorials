@@ -24,4 +24,10 @@ Use the small lysozyme example to to fit branch-site models:
 3. How many LRTs remain significant after the Bonferroni correction for multiple testing?
 4. What can you tell about the evolution of your gene from the ML estimates obtained after the multiple LRT procedure?
 
-> To get the Bonferroni corrected/adjusted p value, divide the original α-value by the number of analyses on the dependent variable. The researcher assigns a new alpha for the set of dependent variables (or analyses) that does not exceed some critical value: αcritical= 1 - (1 – αaltered)k, where k = the number of comparisons on the same dependent variable
+
+<blockquote>
+<a href="http://www.biostathandbook.com/multiplecomparisons.html">About Bonferroni Correction</a>
+<li>Any time you reject a null hypothesis because a P value is less than your critical value, it's possible that you're wrong; the null hypothesis might really be true, and your significant result might be due to chance.</li>
+<li>Instead of setting the critical P level for significance, or alpha, to a certain value (i.e 0.05), you use a lower critical value. If the null hypothesis is true for all of the tests, the probability of getting one result that is significant at this new, lower critical value is 0.05.</li>
+<li>The most common way to correct for multiple testing is with the Bonferroni correction. You find the critical value (alpha) for an individual test by dividing the P-value (i.e. 0.05) by the number of tests. Thus if you are doing 100 statistical tests, the critical value for an individual test would be 0.05/100=0.0005, and you would only consider individual tests with P<0.0005 to be significant.</li>
+</blockquote>
