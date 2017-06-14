@@ -6,6 +6,6 @@ redirect_from: /index.html
 
 ##### Slides
 
-<a href="../../tutorial_data/slides_day2/Positive Selection_2017.pdf" class="btn btn-default active">1. Detecting Positive Selection</a>
+<a href="../../tutorial_data/slides_day2/Positive_Selection_2017.pdf" class="btn btn-default active">1. Detecting Positive Selection</a>
 
 ---
