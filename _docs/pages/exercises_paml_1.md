@@ -19,8 +19,8 @@ Data 1: <a href="../../tutorial_data/tutorial02_paml/lysozymeSmall.nuc">lysozyme
 
 <p><strong>Branch models</strong>.</p>
 
-1. Use the small lysozyme example (publications 2 and 3) to fit **free-ratio model** for branches.
-Are results consistent with those presented in ref. (2)?
+1. Use the small lysozyme example to fit **free-ratio model** for branches.
+Are results consistent with those presented in the publication above?
 
 2. Label the branch leading to colobine clade and fit the **2-ratio branch model** to your data.
 
