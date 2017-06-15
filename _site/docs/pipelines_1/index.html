@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Pipelines</title>
-    <meta name="description" content="Building PipelinesHow to pipe commands together">
+    <meta name="description" content="Building Pipelines">
 
 
     <link rel="stylesheet" href="/2017-ACGT-Tutorials/css/main.css">
@@ -23,15 +23,15 @@
 <title>Pipelines | ACGT Tutorials</title>
 <meta property="og:title" content="Pipelines" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Building Pipelines How to pipe commands together" />
-<meta property="og:description" content="Building Pipelines How to pipe commands together" />
+<meta name="description" content="Building Pipelines" />
+<meta property="og:description" content="Building Pipelines" />
 <link rel="canonical" href="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/pipelines_1/" />
 <meta property="og:url" content="http://lorenzogatti.me/2017-ACGT-Tutorials/docs/pipelines_1/" />
 <meta property="og:site_name" content="ACGT Tutorials" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-06-15T00:20:42+02:00" />
+<meta property="article:published_time" content="2017-06-15T08:59:53+02:00" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Pipelines","datePublished":"2017-06-15T00:20:42+02:00","dateModified":"2017-06-15T00:20:42+02:00","description":"Building Pipelines How to pipe commands together","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/pipelines_1/"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"Pipelines","datePublished":"2017-06-15T08:59:53+02:00","dateModified":"2017-06-15T08:59:53+02:00","description":"Building Pipelines","url":"http://lorenzogatti.me/2017-ACGT-Tutorials/docs/pipelines_1/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -264,19 +264,52 @@
         <div class="col-md-8">
             <h1>Pipelines</h1>
             <div id="markdown-content-container"><h5 id="building-pipelines">Building Pipelines</h5>
-<h6 id="how-to-pipe-commands-together"><strong>How to pipe commands together</strong></h6>
 
-<p><br /></p>
+<p>Automatize phylogenetic reconstruction and positive selection analyses for a group of files within a folder</p>
 
-<hr />
+<ol>
+  <li>MSA alignment is inferred with PRANK 151112</li>
+  <li>Fasta2Phylip is a software to convert fasta files into phylip files. https://indra.mullins.microbiol.washington.edu/perlscript/docs/Sequence.html</li>
+  <li>Phylogentic tree recostruction is performed applying GTR + Gamma</li>
+  <li>CodeML control file (Ctl) preparation</li>
+  <li>CodeML execution</li>
+</ol>
 
-<div class="panel panel-default">
-    <div class="panel-heading">Tasks</div>
-    <div class="panel-body">
-    <ol>
-      <li>Write down command lines to execute the analyses performed in (1)-(4).  </li>
-    </ol>
-    </div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>
+<span class="c">#!/bin/bash</span>
+
+<span class="nv">DIR</span><span class="o">=</span>/Users/lorenzogatti/Desktop/expipelines
+<span class="nv">FILES</span><span class="o">=</span><span class="k">${</span><span class="nv">DIR</span><span class="k">}</span>/<span class="k">*</span>.fasta
+
+<span class="k">for </span>f <span class="k">in</span> <span class="nv">$FILES</span>
+<span class="k">do
+  </span><span class="nb">echo</span> <span class="s2">"Processing </span><span class="nv">$f</span><span class="s2"> file..."</span>
+  <span class="c"># take action on each file. $f store current file name</span>
+
+  <span class="c">#0. Get filename</span>
+  <span class="nv">filename</span><span class="o">=</span><span class="k">$(</span>basename <span class="nv">$f</span><span class="k">)</span>
+
+  <span class="c"># 1. MSA alignment</span>
+  <span class="c">#muscle -in $f -out ${f}.aln</span>
+  prank -d<span class="o">=</span><span class="nv">$f</span> -o<span class="o">=</span><span class="k">${</span><span class="nv">f</span><span class="k">}</span>.aln -codon -F
+
+  <span class="c"># 2. Covert fasta file in Phylip format</span>
+  Fasta2Phylip.pl <span class="k">${</span><span class="nv">f</span><span class="k">}</span>.aln.best.fas <span class="k">${</span><span class="nv">DIR</span><span class="k">}</span>/<span class="k">${</span><span class="nv">filename</span><span class="k">}</span>.phy
+
+  <span class="c"># 3. Tree reconstruction</span>
+  phyml -i <span class="k">${</span><span class="nv">DIR</span><span class="k">}</span>/<span class="k">${</span><span class="nv">filename</span><span class="k">}</span>.phy -m <span class="s1">'GTR'</span> -t <span class="s1">'e'</span> -a <span class="s1">'e'</span> -f <span class="s1">'m'</span>
+
+  <span class="c"># 4. Prepare control file codeml</span>
+  cp <span class="k">${</span><span class="nv">DIR</span><span class="k">}</span>/codeml_template.txt <span class="k">${</span><span class="nv">DIR</span><span class="k">}</span>/codeml_<span class="k">${</span><span class="nv">filename</span><span class="k">}</span>.ctl
+  <span class="nb">echo</span> <span class="s2">"seqfile = </span><span class="k">${</span><span class="nv">DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">filename</span><span class="k">}</span><span class="s2">.phy"</span> &gt;&gt; <span class="k">${</span><span class="nv">DIR</span><span class="k">}</span>/codeml_<span class="k">${</span><span class="nv">filename</span><span class="k">}</span>.ctl
+  <span class="nb">echo</span> <span class="s2">"treefile = </span><span class="k">${</span><span class="nv">DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">filename</span><span class="k">}</span><span class="s2">.phy_phyml_tree.txt"</span> &gt;&gt; <span class="k">${</span><span class="nv">DIR</span><span class="k">}</span>/codeml_<span class="k">${</span><span class="nv">filename</span><span class="k">}</span>.ctl
+  <span class="nb">echo</span> <span class="s2">"outfile = </span><span class="k">${</span><span class="nv">DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">filename</span><span class="k">}</span><span class="s2">_fr.txt"</span> &gt;&gt; <span class="k">${</span><span class="nv">DIR</span><span class="k">}</span>/codeml_<span class="k">${</span><span class="nv">filename</span><span class="k">}</span>.ctl
+
+  <span class="c"># 5. Execute codeml</span>
+  <span class="c">#codeml ${DIR}/codeml_${filename}.ctl</span>
+<span class="k">done</span>
+
+</code></pre>
 </div>
 </div>
             <!--<p class="text-center">
