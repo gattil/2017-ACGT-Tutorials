@@ -17,7 +17,6 @@ Automatize phylogenetic reconstruction and positive selection analyses for a gro
 
 
 ```bash
-
 #!/bin/bash
 
 DIR=/Users/lorenzogatti/Desktop/expipelines
@@ -33,22 +32,24 @@ do
 
   # 1. MSA alignment
   #muscle -in $f -out ${f}.aln
+  #prank -d=$f -o=${f}.aln -codon -F -f=phylip
   prank -d=$f -o=${f}.aln -codon -F
 
   # 2. Covert fasta file in Phylip format
-  Fasta2Phylip.pl ${f}.aln.best.fas ${DIR}/${filename}.phy
+  Fasta2Phylip.pl ${f}.aln.best.fas ${DIR}/${filename}.aln.best.phy
 
   # 3. Tree reconstruction
-  phyml -i ${DIR}/${filename}.phy -m 'GTR' -t 'e' -a 'e' -f 'm'
+  phyml -i ${DIR}/${filename}.aln.best.phy -m 'GTR' -t 'e' -a 'e' -f 'm'
 
   # 4. Prepare control file codeml
   cp ${DIR}/codeml_template.txt ${DIR}/codeml_${filename}.ctl
-  echo "seqfile = ${DIR}/${filename}.phy" >> ${DIR}/codeml_${filename}.ctl
+  echo "seqfile = ${DIR}/${filename}.aln.best.phy" >> ${DIR}/codeml_${filename}.ctl
   echo "treefile = ${DIR}/${filename}.phy_phyml_tree.txt" >> ${DIR}/codeml_${filename}.ctl
   echo "outfile = ${DIR}/${filename}_fr.txt" >> ${DIR}/codeml_${filename}.ctl
 
   # 5. Execute codeml
-  #codeml ${DIR}/codeml_${filename}.ctl
+  codeml ${DIR}/codeml_${filename}.ctl
 done
+
 
 ```
